@@ -1,0 +1,41 @@
+---
+import MainLayout from '../../../layouts/main.astro'
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
+import ArticleCard from '../../../components/post-card.astro'
+import { capitalize } from '../../../utils'
+import PageHeading from '../../../components/page-heading.astro'
+
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+    (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => { 
+        return b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+     }
+)
+
+const { tag } = Astro.params
+
+if( tag === undefined) {
+    throw new Error("tag is required")
+}
+
+const tagPosts = allBlogArticles.filter(article => (
+    article.data.tags.includes(tag) 
+))
+---
+<MainLayout title={`Tag - #${capitalize(tag)}`}>
+    <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+        <PageHeading
+          title={`#${capitalize(tag)}`}
+          description=""
+        />
+        <div>
+            {
+                tagPosts.map(post => (
+                    <ArticleCard post={post} />
+                ))
+            }
+        </div>
+      </section>
+
+</MainLayout>

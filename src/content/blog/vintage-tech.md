@@ -1,8 +1,11 @@
 ---
-layout: ../../layouts/post.astro
 title: The Revival of Vintage Tech
 description: Embark on a nostalgic journey exploring the charm of vintage tech and its unexpected resurgence among modern developers and designers.
-dateFormatted: July 27th, 2023
+author: "Ahmed Mirghani"
+image: /assets/images/posts/code-canvas.jpg
+pubDate: 2023-07-27
+tags: ["UI", "frontend", "UX", "design"]
+slug: vintage-tech
 ---
 
 ![Vintage Tech](/assets/images/posts/vintage-tech-01.jpg)

@@ -1,8 +1,11 @@
 ---
-layout: ../../layouts/post.astro
 title: Writing Less, Achieving More
 description: Delve into the art of minimalist coding, where simplicity reigns supreme, leading to clearer, more efficient, and aesthetically pleasing code.
-dateFormatted: July 27th, 2023
+author: "Ahmed Mirghani"
+image: /assets/images/posts/code-canvas.jpg
+pubDate: 2023-08-03
+tags: ["Minialism", "design", "code-style"]
+slug: writing-less-achieving-more
 ---
 
 ![Writing Less, Achieve More](/assets/images/posts/workspace.jpg)

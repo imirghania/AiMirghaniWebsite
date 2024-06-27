@@ -1,0 +1,38 @@
+[
+  {
+    "discription": "⭐Standard Data Science eco-system",
+    "tools": "🚀Numpy, Pandas, Scipy & sklearn"
+  },
+  {
+    "discription": "⭐Data Visualization",
+    "tools": "🚀Matplotlib, Seaborn & Plotly"
+  },
+  {
+    "discription": "⭐Data Analysis & dashboards",
+    "tools": "🚀Streamlit & Dash"
+  },
+  {
+    "discription": "⭐Computer vision",
+    "tools": "🚀OpenCV, PyTorch & TorchVision"
+  },
+  {
+    "discription": "⭐Time series Analysis",
+    "tools": "🚀Prophet & statsmodels"
+  },
+  {
+    "discription": "⭐Web developing",
+    "tools": "🚀FastAPI & Flask"
+  },
+  {
+    "discription": "⭐GUI applications",
+    "tools": "🚀Tkinter & PySide6"
+  },
+  {
+    "discription": "⭐ERP development",
+    "tools": "🚀Odoo"
+  },
+  {
+    "discription": "⭐A litle bit of frontend",
+    "tools": "🚀Vue3.js, Nuxt & Astro"
+  }
+]

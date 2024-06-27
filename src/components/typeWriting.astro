@@ -1,0 +1,52 @@
+<div
+class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white"
+>
+    <span class="text-slate-100 dark:text-neutral-900">(venv) &#8921 </span>
+    <span id="typing" class="text-fuchsia-400 dark:text-fuchsia-800"></span>
+</div>
+
+
+<script>
+    // @ts-ignore
+    import Typewriter from 'typewriter-effect/dist/core';
+    declare type TypeWrtr = typeof Typewriter;
+    import skills from '../setupCollections/skills.json'
+
+    let container = document.querySelector("#typing")
+
+
+    let typewriter = new Typewriter(container, {
+    loop: true,
+    delay: 75,
+    });
+
+    function printSkill(typewriter:TypeWrtr, 
+                        str:string,
+                        deletionSpeed:number=20,
+                        afterTyingPause:number=1000,
+                        afterDeletePause:number=500): TypeWrtr{
+
+        return typewriter.typeString(str)
+                        .pauseFor(afterTyingPause)
+                        .deleteAll(deletionSpeed)
+                        .pauseFor(afterDeletePause)
+                        }
+
+    typewriter = typewriter.pauseFor(3500)
+                        .typeString("import skills from knowledge_base")
+                        .pauseFor(1500)
+                        .deleteAll(5)
+                        .pauseFor(800)
+                        .typeString('<span style="color: #27ae60;">....  <code>Loading</code> ....</span>')
+                        .pauseFor(2000)
+                        .deleteAll(5)
+                        .pauseFor(3000)
+
+    skills.forEach((skill) => {
+        typewriter = printSkill(typewriter, skill.discription)
+        typewriter = printSkill(typewriter, skill.tools)
+    })
+
+    typewriter.pauseFor(10000).start();
+
+</script>

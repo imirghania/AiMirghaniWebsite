@@ -18,5 +18,12 @@
 		"astro": "^4.8.2",
 		"tailwindcss": "^3.4.3",
 		"typescript": "^5.4.5"
+	},
+	"dependencies": {
+		"@astrojs/vue": "^4.5.0",
+		"animate.css": "^4.1.1",
+		"animated-tailwindcss": "^4.0.0",
+		"typewriter-effect": "^2.21.0",
+		"vue": "^3.4.30"
 	}
 }
