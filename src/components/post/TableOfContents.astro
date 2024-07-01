@@ -1,0 +1,27 @@
+---
+import { buildToc } from '../../utils';
+import TableOfContentsHeading from './TableOfContentsHeading.astro'
+import type { MarkdownHeading } from 'astro';
+
+const { headings } = Astro.props;
+
+interface Props {
+    headings: MarkdownHeading[]
+}
+
+const toc = buildToc(headings);
+---
+
+<div class="collapse collapse-arrow join-item border-base-300 border">
+  <input type="checkbox" name="my-accordion-4" checked />
+  <div class="collapse-title text-xl font-bold text-black dark:text-white">
+    Table of Contents
+  </div>
+  <div class="collapse-content">
+    <nav>
+      <ul class="list-none">
+        {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
+      </ul>
+    </nav>
+  </div>
+</div>

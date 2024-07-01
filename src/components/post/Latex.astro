@@ -1,0 +1,10 @@
+---
+import * as katex from 'katex';
+
+const { formula='', position="center" } = Astro.props;
+const html = katex.renderToString(formula, {throwOnError: false});
+---
+
+<div class={position==="center"? "text-center": "text-start"}>
+	<span set:html={html} class="" />
+</div>

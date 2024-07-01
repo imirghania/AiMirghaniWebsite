@@ -1,0 +1,59 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+export interface TocItem extends MarkdownHeading {
+	children: TocItem[];
+}
+
+const { heading } = Astro.props;
+---
+
+<li>
+    - <a href={'#' + heading.slug} 
+        class="decoration-wavy text-neutral-600 dark:text-white hover:text-fuchsia-700">
+        {heading.text}
+    </a>
+    {
+        heading.subheadings.length > 0 && (
+        <ul class="list-none">
+            {heading.subheadings.map((subheading:TocItem) => (
+            <Astro.self heading={subheading} />
+            ))}
+        </ul>
+        )
+    }
+</li>
+
+<style is:global>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .anchor {
+        display: inline-block;
+        text-decoration: none;
+        padding-left: 0.5rem;
+        }
+    
+    :target::before {
+        content: "";
+        display: block;
+        height: 80px; /* Adjust according to your navbar height */
+        margin-top: -80px;
+        visibility: hidden;
+    }
+
+    .anchor i {
+        visibility: hidden;
+        font-size: 1.25rem;
+    }
+
+    h1:hover .anchor i,
+    h2:hover .anchor i,
+    h3:hover .anchor i,
+    h4:hover .anchor i,
+    h5:hover .anchor i,
+    h6:hover .anchor i {
+        visibility: visible;
+    }
+</style>

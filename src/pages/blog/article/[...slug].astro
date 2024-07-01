@@ -2,6 +2,9 @@
 import { getEntry } from 'astro:content';
 import MainLayout from "../../../layouts/main.astro";
 import { formatDate } from '../../../utils';
+import Tags from '../../../components/Tags.astro';
+import TableOfContents from '../../../components/post/TableOfContents.astro';
+import { buildToc, type TocItem } from '../../../utils' 
 
 const { slug } = Astro.params
 
@@ -15,12 +18,15 @@ if(entry == undefined) {
     return Astro.redirect('/404')
 }
 
-const { Content } = await entry.render()
+const { Content, remarkPluginFrontmatter, headings } = await entry.render()
+
+const toc: TocItem[] = buildToc(headings ?? []);
+const hasToC = toc.length > 1;
 ---
 
 <MainLayout title={`Blog Post - ${entry.data.title}`}>
   <main
-    class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900"
+    class="relative z-30 max-w-5xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 snap-y"
   >
     <div
       class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
@@ -34,7 +40,7 @@ const { Content } = await entry.render()
       >
       </div>
       <h1
-        class="w-full max-w-2xl mx-auto text-3xl font-bold leading-tight tracking-tighter text-left md:mb-12 md:text-4xl dark:text-neutral-100 lg:text-5xl md:leading-none"
+        class="w-full max-w-2xl mx-auto text-3xl font-bold leading-tight tracking-tighter text-center md:mb-12 md:text-4xl dark:text-neutral-100 lg:text-5xl md:leading-none"
       >
         {entry.data.title}
       </h1>
@@ -44,10 +50,21 @@ const { Content } = await entry.render()
       class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
     >
       <h4 class="mt-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
-        {`Written by ${entry.data.author} on ${formatDate(entry.data.pubDate
-        )}`}</h4>
+        Written by <a href="/about" class="font-semibold">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
+          )}</span>}
+      </h4>
+      <h4 class="my-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
+        {`📖 ~ ${remarkPluginFrontmatter.minutesRead}`}
+      </h4>
+      <div class="flex justify-center mb-2.5">
+        <Tags tags={entry.data.tags} />
+      </div>
+      {
+      entry.data.image? <img src={entry.data.image}
+      alt={`image of Post - ${entry.data.title}`}> : ''
+      }
+      {hasToC? <TableOfContents headings={headings} />: ''}
       <Content />
     </article>
   </main>
 </MainLayout>
-

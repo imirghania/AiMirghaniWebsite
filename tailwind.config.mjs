@@ -8,7 +8,7 @@ module.exports = withAnimations({
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 });
 
 // export default {

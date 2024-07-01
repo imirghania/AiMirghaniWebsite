@@ -1,6 +1,6 @@
 ---
-import Tags from "../components/Tags.astro"
-import { formatDate } from "../utils";
+import Tags from "../Tags.astro"
+import { formatDate } from "../../utils";
 
 const { post } = Astro.props;
 ---
@@ -64,7 +64,6 @@ onclick={`location.href = 'blog/article/${post.slug}'`}
   <div class="my-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300">
     Posted on {formatDate(post.data.pubDate)}
   </div>
-  <pre>{post.slug}</pre>
   <Tags tags={post.data.tags}/>
 </div>
 </div>

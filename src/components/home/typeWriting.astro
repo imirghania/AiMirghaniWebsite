@@ -10,7 +10,7 @@ class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white
     // @ts-ignore
     import Typewriter from 'typewriter-effect/dist/core';
     declare type TypeWrtr = typeof Typewriter;
-    import skills from '../setupCollections/skills.json'
+    import skills from '../../setupCollections/skills.json'
 
     let container = document.querySelector("#typing")
 
@@ -32,12 +32,12 @@ class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white
                         .pauseFor(afterDeletePause)
                         }
 
-    typewriter = typewriter.pauseFor(3500)
+    typewriter = typewriter.pauseFor(4500)
                         .typeString("import skills from knowledge_base")
                         .pauseFor(1500)
                         .deleteAll(5)
                         .pauseFor(800)
-                        .typeString('<span style="color: #27ae60;">....  <code>Loading</code> ....</span>')
+                        .typeString('<span style="color: #27ae60;">... Loading .....</span>')
                         .pauseFor(2000)
                         .deleteAll(5)
                         .pauseFor(3000)

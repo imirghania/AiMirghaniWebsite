@@ -8,7 +8,7 @@ tags: ["insights", "aspiration"]
 slug: code-to-canvas
 ---
 
-![Coffee and Code](/assets/images/posts/code-canvas.jpg)
+<!-- ![Coffee and Code](/assets/images/posts/code-canvas.jpg) -->
 
 Starting a blog as a developer is not just about sharing code snippets or technical tutorials. It's about sharing a piece of yourself, your experiences, and your unique perspective on the world of technology. Every developer has their own way of explaining things, and by putting your knowledge out there, you're not only helping others but also carving a niche for yourself in the vast digital landscape.
 
