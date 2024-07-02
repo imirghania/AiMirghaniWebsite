@@ -10,6 +10,7 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  site: "https://www.my-site.dev",
   integrations: [tailwind(), vue(), mdx(), icon()],
   markdown: {
     remarkPlugins: [remarkReadingTime],
@@ -18,7 +19,7 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "append",
+          behavior: "wrap",
           headingProperties: {
             className: ["scroll-mt-6 no-underline"],
           },
@@ -28,7 +29,7 @@ export default defineConfig({
           content: {
             type: "element",
             tagName: "i",
-            properties: { className: ["fas", "fa-link"], size: "xs" },
+            properties: { className: ["fas", "fa-link"] },
           },
         },
       ],

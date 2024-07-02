@@ -31,7 +31,7 @@ const feed = "https://feed.miantiao.me/";
         <form
           method="get"
           action={feed}
-          class="p-6 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600"
+          class="p-6 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 w-[22rem]"
         >
           <div class="relative flex items-center space-x-2">
             <svg
@@ -50,7 +50,7 @@ const feed = "https://feed.miantiao.me/";
             <h2
               class="flex text-sm font-semibold text-neutral-900 dark:text-neutral-100"
             >
-              Subscribe my blog
+              Subscribe to my blog
             </h2>
           </div>
           <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
@@ -81,6 +81,13 @@ const feed = "https://feed.miantiao.me/";
             >
           </div>
         </form>
+        <iframe
+          class="mt-6 p-6 border-2 border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600"
+          src="https://aimirghani.substack.com/embed" 
+          width="350" height="320" 
+          style="border:1px solid #EEE; background:white;" 
+          frameborder="0" scrolling="no">
+        </iframe>
       </div>
     </div>
   </div>

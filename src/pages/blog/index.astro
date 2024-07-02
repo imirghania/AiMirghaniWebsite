@@ -1,7 +1,22 @@
 ---
 import PageHeading from "../../components/page-heading.astro";
 import PostsLoop from "../../components/post/posts-loop.astro";
+import Pagination from "../../components/pagination.astro"
 import Layout from "../../layouts/main.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from 'astro:content';
+import PostCard from "../../components/post/post-card.astro";
+
+const ARTICLES_PER_PAGE = 5
+
+const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
+
+const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
+  .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE);
+
+  const articlesForPage: CollectionEntry<'blog'>[] = allBlogArticles.slice((currentPage - 1) * ARTICLES_PER_PAGE, currentPage * ARTICLES_PER_PAGE);
 ---
 
 <Layout title="AiMirghani - Blog">
@@ -12,7 +27,20 @@ import Layout from "../../layouts/main.astro";
     />
 
     <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
-      <PostsLoop count="10" />
+      { articlesForPage.map((post) => {
+        return (
+          <PostCard post={post} />
+        )
+      }) }
+    </div>
+
+    <div class="flex justify-center">
+      <Pagination 
+        currentPage={currentPage} 
+        totalPages={totalPages} 
+        disablePrevious={currentPage === 1} 
+        disableNext={currentPage === totalPages} 
+      />
     </div>
   </section>
 </Layout>

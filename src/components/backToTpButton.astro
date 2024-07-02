@@ -1,0 +1,37 @@
+---
+
+---
+
+<a href="#" id="goToTopBtn" class="hidden">
+    <div class="w-10 h-10 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 rounded-full fixed bottom-20 right-14 lg:right-20 flex justify-center  p-3 z-50 drop-shadow-lg hover:scale-110 ease-in-out duration-150">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+</a>
+
+
+<script>
+    const goToTopBtn = document.getElementById("goToTopBtn") as HTMLElement
+
+    if (goToTopBtn === null) {
+        throw new Error("A go to top button must be existing on the DOM")
+    }
+
+    window.addEventListener("scroll", checkHeight)
+
+    function checkHeight() {
+        if (window.scrollY > 300) {
+            // goToTopBtn.style.display = "inline-block"
+            goToTopBtn.classList.remove("hidden")
+        } else {
+            // goToTopBtn.style.display = "none"
+            goToTopBtn.classList.add("hidden")
+        }
+    }
+</script>
+
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+</style>

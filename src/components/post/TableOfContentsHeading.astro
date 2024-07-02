@@ -10,7 +10,7 @@ const { heading } = Astro.props;
 
 <li>
     - <a href={'#' + heading.slug} 
-        class="decoration-wavy text-neutral-600 dark:text-white hover:text-fuchsia-700">
+        class="no-underline text-neutral-600 dark:text-white hover:text-fuchsia-700">
         {heading.text}
     </a>
     {
@@ -32,8 +32,8 @@ const { heading } = Astro.props;
     .anchor {
         display: inline-block;
         text-decoration: none;
-        padding-left: 0.5rem;
-        }
+        text-decoration: none;
+    }
     
     :target::before {
         content: "";
@@ -42,10 +42,11 @@ const { heading } = Astro.props;
         margin-top: -80px;
         visibility: hidden;
     }
-
+    
     .anchor i {
         visibility: hidden;
         font-size: 1.25rem;
+        padding-left: 0.5rem;
     }
 
     h1:hover .anchor i,
