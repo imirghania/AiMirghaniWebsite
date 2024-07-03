@@ -14,5 +14,9 @@
   {
     "name": "About",
     "url": "/about"
+  },
+  {
+    "name": "Newsletter",
+    "url": "https://aimirghani.substack.com/welcome"
   }
 ]

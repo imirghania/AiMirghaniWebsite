@@ -15,7 +15,6 @@ const feed = "https://feed.miantiao.me/";
     Along with coding I also like to write about life and technology. Here are
     some of my recent posts.
   </p>
-
   <div class="w-full max-w-4xl mx-auto my-7 xl:px-0">
     <div
       class="flex flex-col items-start justify-start md:flex-row md:space-x-7"
@@ -31,7 +30,7 @@ const feed = "https://feed.miantiao.me/";
         <form
           method="get"
           action={feed}
-          class="p-6 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600 w-[22rem]"
+          class="p-6 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600"
         >
           <div class="relative flex items-center space-x-2">
             <svg
@@ -61,8 +60,7 @@ const feed = "https://feed.miantiao.me/";
             >, <a
               class="font-bold"
               href={`https://www.inoreader.com/feed/${encodeURIComponent(feed)}`}
-              >Inoreader</a
-            > or <a class="font-bold" href={feed}>RSS</a>.
+              >Inoreader</a> or <a class="font-bold" href={feed}>RSS</a>.
           </p>
           <div class="flex flex-col items-center w-full mt-4 space-y-3">
             <input
@@ -81,13 +79,6 @@ const feed = "https://feed.miantiao.me/";
             >
           </div>
         </form>
-        <iframe
-          class="mt-6 p-6 border-2 border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600"
-          src="https://aimirghani.substack.com/embed" 
-          width="350" height="320" 
-          style="border:1px solid #EEE; background:white;" 
-          frameborder="0" scrolling="no">
-        </iframe>
       </div>
     </div>
   </div>

@@ -3,6 +3,15 @@
   "compilerOptions": {
     "jsx": "preserve",
     "moduleResolution": "node",
-    "allowJs": true
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@content/*": ["src/content/*"],
+      "@images/*": ["src/images/*"],
+      "@setupCollections/*": ["src/setupCollections/*"]
+    }
   }
 }
