@@ -1,0 +1,16 @@
+[
+  {
+    "dates": "August 2020",
+    "degree": "MSc. Machine Learning and Data Analysis",
+    "university": "ITMO University, Russia",
+    "faculty": "Faculty of Information Technology and Programming",
+    "logo": "/assets/images/education/itmo_university.png"
+  },
+  {
+    "dates": "December 2012",
+    "degree": "BSc. Mathematics and Computer Science",
+    "university": "University of Khartoum, Sudan",
+    "faculty": "Faculty of Mathematical Sciences",
+    "logo": "/assets/images/education/uofk.jpg"
+  }
+]

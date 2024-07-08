@@ -19,7 +19,7 @@ const toc = buildToc(headings);
   </div>
   <div class="collapse-content">
     <nav>
-      <ul class="list-none">
+      <ul class="list-none list-outside">
         {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
       </ul>
     </nav>

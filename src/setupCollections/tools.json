@@ -1,0 +1,197 @@
+[
+  {
+    "skillName": "Data Processing",
+    "skillTools": [
+      {
+        "logo": "dataProcessing/numpy",
+        "url": "https://numpy.org/",
+        "tooltip": "Numpy"
+      },
+      {
+        "logo": "dataProcessing/pandas",
+        "url": "https://pandas.pydata.org/",
+        "tooltip": "Pandas"
+      },
+      {
+        "logo": "dataProcessing/scipy",
+        "url": "https://scipy.org/",
+        "tooltip": "Scipy"
+      }
+    ]
+  },
+  {
+    "skillName": "Model Building",
+    "skillTools": [
+      {
+        "logo": "modeling/statsmodels",
+        "url": "https://www.statsmodels.org/stable/index.html",
+        "tooltip": "Statsmodels"
+      },
+      {
+        "logo": "modeling/sklearn",
+        "url": "https://scikit-learn.org/stable/",
+        "tooltip": "Sklearn"
+      },
+      {
+        "logo": "modeling/prophet",
+        "url": "https://facebook.github.io/prophet/",
+        "tooltip": "Prophet"
+      },
+      {
+        "logo": "modeling/pytorch",
+        "url": "https://pytorch.org/",
+        "tooltip": "PyTorch"
+      }
+    ]
+  },
+  {
+    "skillName": "Data Visualization",
+    "skillTools": [
+      {
+        "logo": "dataVis/matplotlib",
+        "url": "https://matplotlib.org/",
+        "tooltip": "Matplotlib"
+      },
+      {
+        "logo": "dataVis/seaborn",
+        "url": "https://seaborn.pydata.org/",
+        "tooltip": "Seaborn"
+      },
+      {
+        "logo": "dataVis/plotly",
+        "url": "https://plotly.com/",
+        "tooltip": "Plotly"
+      },
+      {
+        "logo": "dataVis/streamlit",
+        "url": "https://streamlit.io/",
+        "tooltip": "Streamlit"
+      }
+    ]
+  },
+  {
+    "skillName": "Computer Vision",
+    "skillTools": [
+      {
+        "logo": "computerVision/opencv",
+        "url": "https://opencv.org/",
+        "tooltip": "OpenCV"
+      },
+      {
+        "logo": "computerVision/pillow",
+        "url": "https://pillow.readthedocs.io/",
+        "tooltip": "PIL"
+      }
+    ]
+  },
+  {
+    "skillName": "Web Development",
+    "skillTools": [
+      {
+        "logo": "webDev/fastapi",
+        "url": "https://fastapi.tiangolo.com/",
+        "tooltip": "FastAPI"
+      },
+      {
+        "logo": "webDev/flask",
+        "url": "https://flask.palletsprojects.com/",
+        "tooltip": "Flask"
+      },
+      {
+        "logo": "webDev/jinja2",
+        "url": "https://jinja.palletsprojects.com/",
+        "tooltip": "Jinja2 Templating Engine"
+      },
+      {
+        "logo": "webDev/htmx",
+        "url": "https://htmx.org/",
+        "tooltip": "HTMX"
+      },
+      {
+        "logo": "webDev/rabbitmq",
+        "url": "https://www.rabbitmq.com/",
+        "tooltip": "RabbitMQ"
+      },
+      {
+        "logo": "webDev/vue",
+        "url": "https://vuejs.org/",
+        "tooltip": "Vue3.js"
+      },
+      {
+        "logo": "webDev/nuxt",
+        "url": "https://nuxt.com/",
+        "tooltip": "Nuxt3.js"
+      },
+      {
+        "logo": "webDev/astro",
+        "url": "https://astro.build/",
+        "tooltip": "Astro.js"
+      }
+    ]
+  },
+  {
+    "skillName": "Databases",
+    "skillTools": [
+      {
+        "logo": "databases/postgresql",
+        "url": "https://www.postgresql.org/",
+        "tooltip": "Postgresql"
+      },
+      {
+        "logo": "databases/mysql",
+        "url": "https://www.mysql.com/",
+        "tooltip": "MySQL"
+      },
+      {
+        "logo": "databases/sqlalchemy",
+        "url": "https://www.sqlalchemy.org/",
+        "tooltip": "SQLAlchemy"
+      },
+      {
+        "logo": "databases/mongodb",
+        "url": "https://www.mongodb.com/",
+        "tooltip": "MongoDB"
+      },
+      {
+        "logo": "databases/beanie",
+        "url": "https://beanie-odm.dev/",
+        "tooltip": "Beanie-odm"
+      },
+      {
+        "logo": "databases/redis",
+        "url": "https://beanie-odm.dev/",
+        "tooltip": "Redis"
+      }
+    ]
+  },
+  {
+    "skillName": "Dev Tools",
+    "skillTools": [
+      {
+        "logo": "devTools/pytest",
+        "url": "https://docs.pytest.org/",
+        "tooltip": "PyTest"
+      },
+      {
+        "logo": "devTools/git",
+        "url": "https://git-scm.com/",
+        "tooltip": "Git"
+      },
+      {
+        "logo": "devTools/githubActions",
+        "url": "https://docs.github.com/en/actions",
+        "tooltip": "Github Actions"
+      },
+      {
+        "logo": "devTools/mlflow",
+        "url": "https://mlflow.org/",
+        "tooltip": "Mlflow"
+      },
+      {
+        "logo": "devTools/airflow",
+        "url": "https://airflow.apache.org/",
+        "tooltip": "Apache Airflow"
+      }
+    ]
+  }
+]
