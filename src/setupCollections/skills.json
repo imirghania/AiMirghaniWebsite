@@ -8,12 +8,12 @@
     "tools": "🚀Matplotlib, Seaborn & Plotly"
   },
   {
-    "discription": "⭐Data Analysis & dashboards",
+    "discription": "⭐Data Analysis dashboards",
     "tools": "🚀Streamlit & Dash"
   },
   {
     "discription": "⭐Computer vision",
-    "tools": "🚀OpenCV, PyTorch & TorchVision"
+    "tools": "🚀OpenCV, PIL & TorchVision"
   },
   {
     "discription": "⭐Time series Analysis",
@@ -26,10 +26,6 @@
   {
     "discription": "⭐GUI applications",
     "tools": "🚀Tkinter & PySide6"
-  },
-  {
-    "discription": "⭐ERP development",
-    "tools": "🚀Odoo"
   },
   {
     "discription": "⭐A litle bit of frontend",

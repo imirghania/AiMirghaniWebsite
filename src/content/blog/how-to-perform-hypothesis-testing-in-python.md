@@ -1,8 +1,9 @@
 ---
-title: How to Perform Hypothesis Testing in Python
+title: How to Perform Hypothesis Testing in Python using SciPy
 description: Delve into the art of minimalist coding, where simplicity reigns supreme, leading to clearer, more efficient, and aesthetically pleasing code.
 author: "Ahmed Mirghani"
-image: /assets/images/posts/workspace.jpg
+image: /assets/images/posts/hypothesis-testing.png
+imageSrc: https://link.springer.com/chapter/10.1007/978-3-030-76857-7_14
 pubDate: 2023-08-03
 tags: ["Minialism", "design", "code-style"]
 slug: how-to-perform-hypothesis-testing-in-python
@@ -24,7 +25,7 @@ Hey there, fellow code artisans and design enthusiasts! 🌿 In a world obsessed
 
 > "Simplicity is the ultimate sophistication." - Leonardo da Vinci (Yeah, he wasn't talking about code, but it still applies, right?)
 
-**Tips for Embracing Minimalist Coding**
+## Tips for Embracing Minimalist Coding
 
 - **Refactor Relentlessly**: Always be on the lookout for ways to streamline and optimize your code.
 - **Embrace White Space**: Just as in design, white space in code can improve readability and comprehension.

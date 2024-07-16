@@ -1,7 +1,8 @@
 ---
-const { currentPage, totalPages, disablePrevious, disableNext } = Astro.props;
+const { currentPage, totalPages, pageType, disablePrevious, disableNext } = Astro.props;
 
 interface Props {
+    pageType: string;
     currentPage: number;
     totalPages: number;
     disablePrevious: boolean;
@@ -9,15 +10,15 @@ interface Props {
 }
 ---
 <div class="join grid grid-cols-3">
-    <a href={'/blog?page=' + (currentPage - 1)} 
+    <a href={'/' + pageType + 'blog?page=' + (currentPage - 1)} 
         class:list={
-        ["join-item btn btn-outline",
+        ["join-item btn btn-outline border-dashed border-neutral-300",
         {"pointer-events-none": disablePrevious}
         ]}>«</a>
-    <a class="join-item btn btn-outline pointer-events-none">Page {currentPage}</a>
+    <a class="join-item btn btn-outline border-dashed border-neutral-300 pointer-events-none">Page {currentPage}</a>
     <a href={'/blog?page=' + (currentPage + 1)} 
         class:list={
-        ["join-item btn btn-outline",
+        ["join-item btn btn-outline border-dashed border-neutral-300",
         {"pointer-events-none": disableNext}
         ]}>»</a>
 </div>

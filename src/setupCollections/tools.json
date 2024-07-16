@@ -183,6 +183,11 @@
         "tooltip": "Github Actions"
       },
       {
+        "logo": "devTools/docker",
+        "url": "https://www.docker.com/",
+        "tooltip": "Docker"
+      },
+      {
         "logo": "devTools/mlflow",
         "url": "https://mlflow.org/",
         "tooltip": "Mlflow"

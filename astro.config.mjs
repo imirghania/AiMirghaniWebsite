@@ -5,14 +5,55 @@ import vue from "@astrojs/vue";
 import mdx from "@astrojs/mdx";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 import icon from "astro-icon";
+import rehypePrettyCode from "rehype-pretty-code";
+// import theme from "/codeHighlightTheme.json?url";
+
+const rehypePrettyCodeOptions = {
+  theme: "dracula",
+  onVisitLine(node) {
+    if (node.children.length === 0) {
+      node.children = [
+        {
+          type: "text",
+          value: " ",
+        },
+      ];
+    }
+  },
+  onVisitHighlightedLine(node) {
+    const nodeClass = node.properties.className;
+    if (nodeClass && nodeClass.length > 0) {
+      node.properties.className.push("line--highlighted");
+    } else {
+      node.properties.className = ["line--highlighted"];
+    }
+    // node.properties.className.push("highlighted");
+  },
+  onVisitHighlightedWord(node) {
+    node.properties.className = ["word"];
+  },
+  tokensMap: {},
+};
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   site: "https://www.my-site.dev",
-  integrations: [tailwind(), vue(), mdx(), icon()],
+  integrations: [
+    tailwind(),
+    vue(),
+    mdx({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
+    icon(),
+  ],
   markdown: {
+    extendDefaultPlugins: true,
+    syntaxHighlight: false,
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       rehypeSlug,
@@ -33,6 +74,7 @@ export default defineConfig({
           },
         },
       ],
+      [rehypePrettyCode, rehypePrettyCodeOptions],
     ],
   },
   redirects: {

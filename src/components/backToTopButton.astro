@@ -1,5 +1,4 @@
 ---
-
 ---
 
 <a href="#" id="goToTopBtn" class="hidden">
@@ -10,6 +9,9 @@
 
 
 <script>
+    import { BACK_TO_TOP_OFFSET } from "@root/constants"
+
+
     const goToTopBtn = document.getElementById("goToTopBtn") as HTMLElement
 
     if (goToTopBtn === null) {
@@ -19,7 +21,7 @@
     window.addEventListener("scroll", checkHeight)
 
     function checkHeight() {
-        if (window.scrollY > 300) {
+        if (window.scrollY > BACK_TO_TOP_OFFSET) {
             // goToTopBtn.style.display = "inline-block"
             goToTopBtn.classList.remove("hidden")
         } else {

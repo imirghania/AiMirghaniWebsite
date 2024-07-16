@@ -1,17 +1,16 @@
 ---
 import { Icon } from 'astro-icon/components'
-import { Image } from 'astro:assets';
-import ProfileImg from "@root/images/profile.png"
 import tools from "@setupCollections/tools.json";
 import education from "@setupCollections/education.json";
 import AboutExperience from "@components/about-experience.astro";
 import Layout from "@root/layouts/main.astro";
 import Separator from "@components/home/separator.astro";
 import { Content as AboutMeContent } from "@root/pages/texts/aboutMe.md";
+import { EMAIL } from '@root/constants';
 ---
 
 <Layout title="AiMirghani - About Me">
-  <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
+  <section class="relative z-40 max-w-3xl mx-auto my-12 px-7 lg:px-0">
 
     <h3 class="text-2xl font-bold dark:text-neutral-200 mb-10">
       Hello everyone 👋
@@ -20,10 +19,6 @@ import { Content as AboutMeContent } from "@root/pages/texts/aboutMe.md";
     <div
       class="text-sm leading-6 text-gray-600 dark:text-neutral-100 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg text-justify mt-4 border-2 border-spacing-4 border-dashed rounded-xl border-neutral-500 px-10 py-9"
     >
-    <!-- <Image src={ProfileImg} 
-          alt="Ahmed Mirghani profile photo" 
-          class="float-right"
-          width={350} /> -->
     <AboutMeContent />
     </div>
 
@@ -56,7 +51,7 @@ import { Content as AboutMeContent } from "@root/pages/texts/aboutMe.md";
     }
 
     <Separator text="Education" />
-
+    
     <div class="px-5 py-10 grid place-content-center">
       {
         education.map((study, loop) => {
@@ -74,11 +69,11 @@ import { Content as AboutMeContent } from "@root/pages/texts/aboutMe.md";
                 </div>
               ) : (
                 <AboutExperience
-                  dates={study.dates}
-                  role={study.degree}
-                  company={study.university}
-                  description={study.faculty}
-                  logo={study.logo}
+                dates={study.dates}
+                role={study.degree}
+                company={study.university}
+                description={study.faculty}
+                logo={study.logo}
                 />
               )}
             </>
@@ -86,18 +81,18 @@ import { Content as AboutMeContent } from "@root/pages/texts/aboutMe.md";
         })
       }
     </div>
+    
+    <Separator text="Let's Connect" />
 
-    <h2 id="contacts" class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200">Let's Connect</h2>
     <p
       class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
     >
       If you want to stay up to date with my work be sure to <a
-        href="https://twitter.com/ccikai"
-        target="_blank"
-        class="text-indigo-600 underline">follow me on twitter</a
-      >, or you can send me an <a href="mailto:astro-aria#miantiao.me" class="text-indigo-600 underline"
+        href="#"
+        class="text-indigo-600 underline">follow me on 𝕏</a
+      >, or you can send me an <a href={EMAIL} class="text-indigo-600 underline"
         >email</a
-      > and I'll be sure to get back to you.
+      > and I'll make sure to get back to you as soon as possible.
     </p>
   </section>
 </Layout>

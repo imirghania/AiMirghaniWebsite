@@ -4,7 +4,7 @@ description: A products-catalog microservice for an e-commerce system.
 image: /assets/images/projects/product_catalog_api_service.png
 pubDate: 2023-07-07
 tags: ["web-dev", "FastAPI", "e-commerce"]
-featured: true
+url: https://github.com/imirghania/FastAPI_e-commerce_product_catalog_service
 slug: products-catalog-microservice
 ---
 

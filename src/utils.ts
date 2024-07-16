@@ -7,6 +7,7 @@ function formatDate(date: Date): string {
   return new Date(date).toLocaleDateString(undefined, options);
 }
 
+// *****************************************
 function capitalize(str: string): string {
   if (typeof str !== "string" || str.length === 0) {
     return str;
@@ -14,6 +15,7 @@ function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// *****************************************
 import type { MarkdownHeading } from "astro";
 
 export interface TocItem extends MarkdownHeading {
@@ -36,4 +38,19 @@ function buildToc(headings: MarkdownHeading[]): TocItem[] {
   return toc;
 }
 
-export { formatDate, capitalize, buildToc };
+// *****************************************
+function customReadingTime(markdown: string) {
+  // Regex to find words and LaTeX blocks
+  const words = markdown.match(/\b\w+\b/g) || [];
+  const latexBlocks = markdown.match(/\$\$[\s\S]*?\$\$/g) || [];
+
+  // Assume an average reading speed (e.g., 200 words per minute)
+  const wordsPerMinute = 200;
+  const latexReadingTime = latexBlocks.length * 0.5; // Estimate: each LaTeX block takes about 30 seconds to read
+
+  const readingTime = words.length / wordsPerMinute + latexReadingTime;
+
+  return Math.ceil(readingTime);
+}
+
+export { formatDate, capitalize, buildToc, customReadingTime };

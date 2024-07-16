@@ -1,10 +1,10 @@
 ---
 import { getEntry } from 'astro:content';
-import MainLayout from "../../../layouts/main.astro";
-import { formatDate } from '../../../utils';
-import Tags from '../../../components/Tags.astro';
-import TableOfContents from '../../../components/post/TableOfContents.astro';
-import { buildToc, type TocItem } from '../../../utils' 
+import MainLayout from "@root/layouts/main.astro";
+import { formatDate } from '@root/utils';
+import Tags from '@components/Tags.astro';
+import TableOfContents from '@components/post/TableOfContents.astro';
+import { buildToc, type TocItem } from '@root/utils' 
 
 const { slug } = Astro.params
 
@@ -26,7 +26,7 @@ const hasToC = toc.length > 1;
 
 <MainLayout title={`Blog Post - ${entry.data.title}`}>
   <main
-    class="relative z-30 max-w-5xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 snap-y"
+    class="relative z-40 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 snap-y"
   >
     <div
       class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
@@ -47,7 +47,7 @@ const hasToC = toc.length > 1;
     </div>
 
     <article
-      class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
+      class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert text-justify"
     >
       <h4 class="mt-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
         Written by <a href="/about" class="font-semibold">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
@@ -60,8 +60,19 @@ const hasToC = toc.length > 1;
         <Tags tags={entry.data.tags} />
       </div>
       {
-      entry.data.image? <img src={entry.data.image}
-      alt={`image of Post - ${entry.data.title}`}> : ''
+      entry.data.image? (
+      <img src={entry.data.image} alt={`image of Post - ${entry.data.title}`}>
+      ) : ""
+      }
+      {
+      entry.data.imageSrc? (
+      <div class="flex place-content-center mb-5">
+        <a href= {entry.data.imageSrc}
+          target="_blank"
+          class="text-center no-underline hover:text-fuchsia-800 hover:scale-105"
+        >[image source]</a>
+      </div>
+      ) : ""
       }
       {hasToC? <TableOfContents headings={headings} />: ''}
       <Content />

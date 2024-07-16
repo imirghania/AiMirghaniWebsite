@@ -8,8 +8,6 @@ tags: ["insights", "aspiration"]
 slug: code-to-canvas
 ---
 
-<!-- ![Coffee and Code](/assets/images/posts/code-canvas.jpg) -->
-
 Starting a blog as a developer is not just about sharing code snippets or technical tutorials. It's about sharing a piece of yourself, your experiences, and your unique perspective on the world of technology. Every developer has their own way of explaining things, and by putting your knowledge out there, you're not only helping others but also carving a niche for yourself in the vast digital landscape.
 
 ## 📝 **Your Unique Voice in the Tech World**
@@ -19,6 +17,22 @@ Remember, when you write, you're not just sharing information. You're sharing _y
 > "In the end, we'll all become stories." - Margaret Atwood
 
 And in the tech world, your story, told through your blog, can resonate with many. It can inspire, educate, and even entertain.
+
+```python showLineNumbers
+from dataclasses import dataclass, field
+
+@dataclass
+class Person:
+    name: str = "Ahmed Mirghani"
+    skills: list[str] = field(
+        default_factory=(
+            lambda: [
+            "Data Science",
+            "Web Development",
+            "Desktop Apps"
+            ])
+        )
+```
 
 ## 🌱 **Growth Beyond Blogging**
 

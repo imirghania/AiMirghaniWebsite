@@ -1,11 +1,10 @@
 ---
 import 'animate.css'
-import Footer from "../components/footer.astro";
-import Header from "../components/navbar.astro";
-import ProgressBar from "../components/scrollProgressBar.astro"
-import SquareLines from "../components/square-lines.astro";
-import katexStyles from '../assets/css/katexStyles.css'
-import BackToTopBtn from '../components/backToTpButton.astro'
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar.astro";
+import ProgressBar from "@components/scrollProgressBar.astro"
+import SquareLines from "@components/square-lines.astro";
+import BackToTopBtn from '@root/components/backToTopButton.astro'
 
 const { title } = Astro.props;
 ---
@@ -18,7 +17,8 @@ const { title } = Astro.props;
     <title>{title}</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href={katexStyles} />
+    <link rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/all.min.css">
 
     <!-- Used to add dark mode right away, adding here prevents any flicker -->
@@ -38,18 +38,30 @@ const { title } = Astro.props;
         border-radius: 20px;
       }
     </style>
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
-    <script src="../assets/css/main.css"></script>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <script src="@root/assets/css/main.css"></script>
     <Fragment set:html={import.meta.env.HEADER_INJECT} />
   </head>
   <body class="antialiased bg-white dark:bg-neutral-950">
-    <SquareLines />
-    <Header />
-    <ProgressBar />
-    <slot />
+    <Fragment>
+      <SquareLines />
+      <Navbar />
+      <ProgressBar />
+      <slot />
+    </Fragment>
     <Footer />
-    <script src="../assets/js/main.js"></script>
+    <script src="@root/assets/js/main.js"></script>
     <Fragment set:html={import.meta.env.FOOTER_INJECT} />
     <BackToTopBtn />
   </body>
 </html>
+
+
+<style>
+  body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+</style>

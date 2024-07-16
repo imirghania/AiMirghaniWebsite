@@ -1,32 +1,55 @@
 ---
-import projects from "../setupCollections/projects.json";
-import PageHeading from "../components/page-heading.astro";
-import Project from "../components/project.astro";
-import Layout from "../layouts/main.astro";
+import PageHeading from "@components/page-heading.astro";
+import Project from "@components/project.astro";
+import Layout from "@root/layouts/main.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from 'astro:content';
+import { PROJECTS_PER_PAGE } from "@root/constants"
+import Pagination from "@components/pagination.astro";
+
+
+const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
+
+const allProjects: CollectionEntry<'projects'>[] = (await getCollection('projects'))
+  .sort((a:CollectionEntry<'projects'>, b:CollectionEntry<'projects'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const totalPages: number = Math.ceil(allProjects.length / PROJECTS_PER_PAGE);
+
+  const projectsPerPage: CollectionEntry<'projects'>[] = allProjects.slice((currentPage - 1) * PROJECTS_PER_PAGE, currentPage * PROJECTS_PER_PAGE);
 ---
 
 <Layout title="AiMirghani - Projects">
-  <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
+  <section class="relative z-40 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
       title="My Projects"
       description="Here are some of the current projects I've been working on. I really enjoy creating new projects and coming up with new ideas. I'm always working on something new, so check back often!"
     />
 
     <div
-      class="z-50 grid items-stretch w-full grid-cols-1 my-8 gap-7 sm:gap-5 sm:grid-cols-2"
+      class="z-50 grid items-stretch w-full grid-cols-1 mt-8 mb-16 gap-7 sm:gap-5 sm:grid-cols-2"
     >
       {
-        projects.map((project) => {
+        projectsPerPage.map((project) => {
           return (
             <Project
-              name={project.name}
-              description={project.description}
-              image={project.image}
-              url={project.url}
+              name={project.data.title}
+              description={project.data.description}
+              image={project.data.image}
+              url={project.data.url}
             />
           )
         })
       }
+    </div>
+
+    <div class="flex justify-center">
+      <Pagination
+        pageType="projects"
+        currentPage={currentPage} 
+        totalPages={totalPages} 
+        disablePrevious={currentPage === 1} 
+        disableNext={currentPage === totalPages} 
+      />
     </div>
   </section>
 </Layout>
