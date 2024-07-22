@@ -1,4 +1,4 @@
-# Aria Template
+# AiMirghani | Personal Website
 
 This is my personal website, blog and portfolio.
 

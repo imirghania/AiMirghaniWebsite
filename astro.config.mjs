@@ -25,10 +25,12 @@ const rehypePrettyCodeOptions = {
   theme: "dracula",
   onVisitLine(node) {
     if (node.children.length === 0) {
-      node.children = [{
-        type: "text",
-        value: " "
-      }];
+      node.children = [
+        {
+          type: "text",
+          value: " ",
+        },
+      ];
     }
   },
   onVisitHighlightedLine(node) {
@@ -43,44 +45,60 @@ const rehypePrettyCodeOptions = {
   onVisitHighlightedWord(node) {
     node.properties.className = ["word"];
   },
-  tokensMap: {}
+  tokensMap: {},
 };
-
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   site: BASE_URL,
-  integrations: [tailwind(), vue(), mdx({
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex]
-  }), icon()],
+  integrations: [
+    tailwind(),
+    vue(),
+    mdx({
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
+    icon(),
+  ],
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
     remarkPlugins: [remarkReadingTime],
-    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, {
-      behavior: "wrap",
-      headingProperties: {
-        className: ["scroll-mt-6 no-underline"]
-      },
-      properties: {
-        className: ["anchor", "scroll-mt-9"]
-      },
-      content: {
-        type: "element",
-        tagName: "i",
-        properties: {
-          className: ["fas", "fa-link"]
-        }
-      }
-    }], [rehypePrettyCode, rehypePrettyCodeOptions]]
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          headingProperties: {
+            className: ["scroll-mt-6 no-underline"],
+          },
+          properties: {
+            className: ["anchor", "scroll-mt-9"],
+          },
+          content: {
+            type: "element",
+            tagName: "i",
+            properties: {
+              className: ["fas", "fa-link"],
+            },
+          },
+        },
+      ],
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+    ],
   },
   redirects: {
     "/blog/tag/blog/article/[...slug]": "/blog/article/the-perfect-brew",
-    "/blogblog": "/blog"
+    "/blogblog": "/blog",
   },
   adapter: node({
-    mode: "standalone"
-  })
+    mode: "standalone",
+  }),
+  vite: {
+    ssr: {
+      noExternal: ["path-to-regexp"],
+    },
+  },
 });
