@@ -1,6 +1,7 @@
-export const SITE_TITLE = "AiMirghani | Personal Website";
+export const SITE_TITLE = "AiMirghani | Ahmed Mirghani's Personal Website";
 export const SITE_DESCRIPTION =
-  "Articles, stories and tutorials about Data Science, Mathematics and Web Development";
+  "This website contains personal experiences, articles, and tutorials about Data Science, Mathematics and Web Development";
+export const SITE_IMAGE = "/assets/images/favicon";
 export const HOMEPAGE_ARTICLE_LIMIT = 3;
 export const ARTICLES_PER_PAGE = 5;
 export const PROJECTS_PER_PAGE = 6;

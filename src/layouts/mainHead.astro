@@ -1,0 +1,43 @@
+---
+import Seo from "@components/seo.astro";
+import { getCollection } from "astro:content";
+
+const { title, description, image, entry, robots } = Astro.props;
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    
+    <Seo {title} {description} url={Astro.url} {image} {entry} {robots} />
+
+    <!-- styles -->
+    <link rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/all.min.css">
+
+    <!-- Used to add dark mode right away, adding here prevents any flicker -->
+    <script is:inline>
+      if (typeof Storage !== 'undefined') {
+        if (
+          localStorage.getItem('dark_mode') &&
+          localStorage.getItem('dark_mode') == 'true'
+        ) {
+          document.documentElement.classList.add('dark')
+        }
+      }
+    </script>
+
+    <style>
+      .prose img {
+        border-radius: 20px;
+      }
+    </style>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <script src="@root/assets/css/main.css"></script>
+    <Fragment set:html={import.meta.env.HEADER_INJECT} />
+  </head>

@@ -24,7 +24,10 @@ const toc: TocItem[] = buildToc(headings ?? []);
 const hasToC = toc.length > 1;
 ---
 
-<MainLayout title={`Blog Post - ${entry.data.title}`}>
+<MainLayout title={`Blog Post - ${entry.data.title}`} 
+            description={entry.data.description}
+            image={entry.data.image}
+            entry={entry} >
   <main
     class="relative z-40 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 snap-y"
   >

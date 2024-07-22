@@ -193,6 +193,11 @@
         "tooltip": "Mlflow"
       },
       {
+        "logo": "devTools/dvc",
+        "url": "https://dvc.org/",
+        "tooltip": "DVC"
+      },
+      {
         "logo": "devTools/airflow",
         "url": "https://airflow.apache.org/",
         "tooltip": "Apache Airflow"

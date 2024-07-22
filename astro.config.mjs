@@ -11,6 +11,8 @@ import icon from "astro-icon";
 import rehypePrettyCode from "rehype-pretty-code";
 // import theme from "/codeHighlightTheme.json?url";
 
+const LIVE_URL = "https://imirghania.github.io";
+
 const rehypePrettyCodeOptions = {
   theme: "dracula",
   onVisitLine(node) {
@@ -41,7 +43,7 @@ const rehypePrettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  site: "https://www.my-site.dev",
+  site: LIVE_URL,
   integrations: [
     tailwind(),
     vue(),
@@ -79,5 +81,6 @@ export default defineConfig({
   },
   redirects: {
     "/blog/tag/blog/article/[...slug]": "/blog/article/the-perfect-brew",
+    "/blogblog": "/blog",
   },
 });

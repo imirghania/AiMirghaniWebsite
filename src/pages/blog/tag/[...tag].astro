@@ -10,7 +10,7 @@ import PageHeading from '../../../components/page-heading.astro'
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
     (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => { 
         return b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-     }
+    }
 )
 
 const { tag } = Astro.params
@@ -36,6 +36,6 @@ const tagPosts = allBlogArticles.filter(article => (
                 ))
             }
         </div>
-      </section>
+    </section>
 
 </MainLayout>

@@ -1,48 +1,23 @@
 ---
+import MainHead from "@root/layouts/mainHead.astro"
 import 'animate.css'
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 import ProgressBar from "@components/scrollProgressBar.astro"
 import SquareLines from "@components/square-lines.astro";
 import BackToTopBtn from '@root/components/backToTopButton.astro'
+import { SITE_TITLE, 
+        SITE_DESCRIPTION, } from "@root/constants"
 
-const { title } = Astro.props;
+const { 
+  title=SITE_TITLE, 
+  description=SITE_DESCRIPTION, 
+  image, entry, robots } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-
-    <!-- styles -->
-    <link rel="stylesheet" 
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/all.min.css">
-
-    <!-- Used to add dark mode right away, adding here prevents any flicker -->
-    <script is:inline>
-      if (typeof Storage !== 'undefined') {
-        if (
-          localStorage.getItem('dark_mode') &&
-          localStorage.getItem('dark_mode') == 'true'
-        ) {
-          document.documentElement.classList.add('dark')
-        }
-      }
-    </script>
-
-    <style>
-      .prose img {
-        border-radius: 20px;
-      }
-    </style>
-    
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
-    <script src="@root/assets/css/main.css"></script>
-    <Fragment set:html={import.meta.env.HEADER_INJECT} />
-  </head>
+  <MainHead {title} {description} {image} {entry} {robots} />
   <body class="antialiased bg-white dark:bg-neutral-950">
     <Fragment>
       <SquareLines />
