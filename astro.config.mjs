@@ -10,7 +10,7 @@ import remarkMath from "remark-math";
 import icon from "astro-icon";
 import rehypePrettyCode from "rehype-pretty-code";
 // import theme from "/codeHighlightTheme.json?url";
-
+import node from "@astrojs/node";
 const SERVER_PORT = 3000;
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 const LIVE_URL = "https://imirghania.github.io";
@@ -21,17 +21,14 @@ let BASE_URL = LOCALHOST_URL;
 if (isBuild) {
   BASE_URL = LIVE_URL;
 }
-
 const rehypePrettyCodeOptions = {
   theme: "dracula",
   onVisitLine(node) {
     if (node.children.length === 0) {
-      node.children = [
-        {
-          type: "text",
-          value: " ",
-        },
-      ];
+      node.children = [{
+        type: "text",
+        value: " "
+      }];
     }
   },
   onVisitHighlightedLine(node) {
@@ -46,50 +43,44 @@ const rehypePrettyCodeOptions = {
   onVisitHighlightedWord(node) {
     node.properties.className = ["word"];
   },
-  tokensMap: {},
+  tokensMap: {}
 };
+
 
 // https://astro.build/config
 export default defineConfig({
   output: "server",
   site: BASE_URL,
-  integrations: [
-    tailwind(),
-    vue(),
-    mdx({
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    }),
-    icon(),
-  ],
+  integrations: [tailwind(), vue(), mdx({
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex]
+  }), icon()],
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
     remarkPlugins: [remarkReadingTime],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          headingProperties: {
-            className: ["scroll-mt-6 no-underline"],
-          },
-          properties: {
-            className: ["anchor", "scroll-mt-9"],
-          },
-          content: {
-            type: "element",
-            tagName: "i",
-            properties: { className: ["fas", "fa-link"] },
-          },
-        },
-      ],
-      [rehypePrettyCode, rehypePrettyCodeOptions],
-    ],
+    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, {
+      behavior: "wrap",
+      headingProperties: {
+        className: ["scroll-mt-6 no-underline"]
+      },
+      properties: {
+        className: ["anchor", "scroll-mt-9"]
+      },
+      content: {
+        type: "element",
+        tagName: "i",
+        properties: {
+          className: ["fas", "fa-link"]
+        }
+      }
+    }], [rehypePrettyCode, rehypePrettyCodeOptions]]
   },
   redirects: {
     "/blog/tag/blog/article/[...slug]": "/blog/article/the-perfect-brew",
-    "/blogblog": "/blog",
+    "/blogblog": "/blog"
   },
+  adapter: node({
+    mode: "standalone"
+  })
 });
