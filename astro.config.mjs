@@ -52,7 +52,7 @@ const rehypePrettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  site: LIVE_URL,
+  site: BASE_URL,
   integrations: [
     tailwind(),
     vue(),
