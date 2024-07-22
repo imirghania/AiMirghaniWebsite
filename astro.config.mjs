@@ -9,18 +9,19 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import icon from "astro-icon";
 import rehypePrettyCode from "rehype-pretty-code";
+import netlify from "@astrojs/netlify";
 // import theme from "/codeHighlightTheme.json?url";
-import node from "@astrojs/node";
+
 const SERVER_PORT = 3000;
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 const LIVE_URL = "https://imirghania.github.io";
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
 let BASE_URL = LOCALHOST_URL;
-// When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {
   BASE_URL = LIVE_URL;
 }
+
 const rehypePrettyCodeOptions = {
   theme: "dracula",
   onVisitLine(node) {
@@ -51,7 +52,7 @@ const rehypePrettyCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   output: "server",
-  site: BASE_URL,
+  // site: BASE_URL,
   integrations: [
     tailwind(),
     vue(),
@@ -93,9 +94,7 @@ export default defineConfig({
     "/blog/tag/blog/article/[...slug]": "/blog/article/the-perfect-brew",
     "/blogblog": "/blog",
   },
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: netlify(),
   vite: {
     ssr: {
       noExternal: ["path-to-regexp"],
