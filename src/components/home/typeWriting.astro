@@ -1,8 +1,8 @@
 <div
 class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white"
 >
-    <span class="text-slate-100 dark:text-neutral-900">(venv) &#8921 </span>
-    <span id="typing" class="text-fuchsia-400 dark:text-fuchsia-800"></span>
+    <span class="text-slate-100 dark:text-neutral-900 text-xs md:text-base">(venv) &#8921 </span>
+    <span id="typing" class="text-fuchsia-400 dark:text-fuchsia-800 text-xs md:text-base"></span>
 </div>
 
 
@@ -10,7 +10,7 @@ class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white
     // @ts-ignore
     import Typewriter from 'typewriter-effect/dist/core';
     declare type TypeWrtr = typeof Typewriter;
-    import skills from '../../setupCollections/skills.json'
+    import skills from '@root/setupCollections/skills.json'
 
     let container = document.querySelector("#typing")
 

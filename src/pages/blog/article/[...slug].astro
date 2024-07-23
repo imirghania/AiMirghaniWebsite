@@ -4,7 +4,9 @@ import MainLayout from "@root/layouts/main.astro";
 import { formatDate } from '@root/utils';
 import Tags from '@components/Tags.astro';
 import TableOfContents from '@components/post/TableOfContents.astro';
-import { buildToc, type TocItem } from '@root/utils' 
+import { buildToc, type TocItem } from '@root/utils'
+import Separator from "@components/home/separator.astro";
+import GiscusComments from "@components/post/comments.astro";
 
 const { slug } = Astro.params
 
@@ -80,5 +82,9 @@ const hasToC = toc.length > 1;
       {hasToC? <TableOfContents headings={headings} />: ''}
       <Content />
     </article>
+
+    <!-- comments -->
+    <Separator text="Comments" />
+    <GiscusComments />
   </main>
 </MainLayout>

@@ -5,7 +5,7 @@ I'm Ahmed Mirghani, a passionate Python developer with an emphasis in Data Scien
 
 My fascination with data science stems from my mathematical background, which fueled my curiosity toward exploring the underlying concepts behind intellegent systems. This curiosity led me later to pursue a Master's degree in Machine Learning and Data Analysis.
 
-My skillset extends beyond the realm of data. I'm also comfortable building user-friendly web interfaces, APIs, and desktop applications and always eager to learn and expand my horizons.
+My skillset extends beyond the realm of data. I also enjoy building user-friendly web interfaces, APIs, and desktop applications and always eager to learn and expand my horizons.
 
 Being a father has taught me valuable lessons about patience, creativity, and finding joy in the little things. In my free time, you'll find me reading a good book, indulging in some artistic expression through drawing, or staying active with some sports.
 
