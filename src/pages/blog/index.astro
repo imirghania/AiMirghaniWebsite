@@ -10,7 +10,9 @@ import { ARTICLES_PER_PAGE } from "@root/constants"
 const currentPage: number | null = +Astro.url.searchParams.get('page')! || 1;
 
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog'))
-  .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  .sort((a:CollectionEntry<'blog'>, b:CollectionEntry<'blog'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).filter(article => (
+    article.data.isPublished
+));
 
   const totalPages: number = Math.ceil(allBlogArticles.length / ARTICLES_PER_PAGE);
 

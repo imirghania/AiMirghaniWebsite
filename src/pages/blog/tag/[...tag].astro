@@ -1,17 +1,19 @@
 ---
-import MainLayout from '../../../layouts/main.astro'
+import MainLayout from '@root/layouts/main.astro'
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
-import ArticleCard from '../../../components/post/post-card.astro'
-import { capitalize } from '../../../utils'
-import PageHeading from '../../../components/page-heading.astro'
+import ArticleCard from '@components/post/post-card.astro'
+import { capitalize } from '@root/utils'
+import PageHeading from '@components/page-heading.astro'
 
 
 const allBlogArticles: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
     (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => { 
         return b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
     }
-)
+).filter(article => (
+    article.data.isPublished
+))
 
 const { tag } = Astro.params
 

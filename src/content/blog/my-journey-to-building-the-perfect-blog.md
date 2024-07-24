@@ -6,6 +6,7 @@ image: /assets/images/posts/blogging.jpg
 imageSrc: https://unsplash.com/photos/vintage-teal-typewriter-beside-book-jLwVAUtLOAQ
 pubDate: 2024-05-27
 tags: ["insights", "aspiration", "blogging", "content-creation"]
+isPublished: true
 slug: my-journey-to-building-the-perfect-blog
 ---
 

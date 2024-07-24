@@ -10,6 +10,7 @@ const blogCollection = defineCollection({
     image: z.string(),
     imageSrc: z.string().optional(),
     tags: z.array(z.string()),
+    isPublished: z.boolean().optional(),
   }),
 });
 
@@ -22,6 +23,7 @@ const projectCollection = defineCollection({
     image: z.string(),
     url: z.string(),
     tags: z.array(z.string()).optional(),
+    isPublished: z.boolean().optional(),
   }),
 });
 

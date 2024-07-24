@@ -16,6 +16,7 @@ tags:
     "Shap",
   ]
 url: https://github.com/imirghania/Credit_Classification_project
+isPublished: true
 slug: Credit-score-classification
 ---
 

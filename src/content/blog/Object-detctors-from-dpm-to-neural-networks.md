@@ -5,6 +5,7 @@ author: "Ahmed Mirghani"
 image: /assets/images/posts/vintage-tech-01.jpg
 pubDate: 2023-07-27
 tags: ["UI", "frontend", "UX", "design"]
+isPublished: false
 slug: Object-detctors-from-dpm-to-neural-networks
 ---
 
