@@ -7,6 +7,7 @@ import TableOfContents from '@components/post/TableOfContents.astro';
 import { buildToc, type TocItem } from '@root/utils'
 import Separator from "@components/home/separator.astro";
 import GiscusComments from "@components/post/comments.astro";
+import { getReadingTime } from "@root/reading-time"
 
 const { slug } = Astro.params
 
@@ -29,9 +30,10 @@ const hasToC = toc.length > 1;
 <MainLayout title={`Blog Post - ${entry.data.title}`} 
             description={entry.data.description}
             image={entry.data.image}
-            entry={entry} >
+            entry={entry} 
+            >
   <main
-    class="relative z-40 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-gray-950 snap-y"
+    class="relative z-40 max-w-4xl pt-4 pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-gray-950 snap-y"
   >
     <div
       class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
@@ -55,11 +57,11 @@ const hasToC = toc.length > 1;
       class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert text-justify"
     >
       <h4 class="mt-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
-        Written by <a href="/about" class="font-semibold text-slate-900 dark:text-slate-100">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
+        Written by <a href="/about" class="font-semibold text-slate-800 dark:text-slate-100">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
           )}</span>}
       </h4>
       <h4 class="my-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
-        {`📖 ~ ${remarkPluginFrontmatter.minutesRead}`}
+        {`📖 ~ ${getReadingTime(entry.body)}`}
       </h4>
       <div class="flex justify-center mb-2.5">
         <Tags tags={entry.data.tags} />
@@ -80,7 +82,7 @@ const hasToC = toc.length > 1;
       ) : ""
       }
       {hasToC? <TableOfContents headings={headings} />: ''}
-      <div class=" text-gray-950 dark:text-neutral-100">
+      <div class=" text-neutral-700 dark:text-neutral-100">
         <Content />
       </div>
     </article>
@@ -90,3 +92,9 @@ const hasToC = toc.length > 1;
     <GiscusComments />
   </main>
 </MainLayout>
+
+<style>
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+  }
+</style>

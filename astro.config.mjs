@@ -41,7 +41,7 @@ export default defineConfig({
   markdown: {
     extendDefaultPlugins: true,
     syntaxHighlight: false,
-    remarkPlugins: [remarkReadingTime],
+    // remarkPlugins: [remarkReadingTime],
     rehypePlugins: [
       rehypeSlug,
       [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
