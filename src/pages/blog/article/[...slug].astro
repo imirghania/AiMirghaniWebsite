@@ -31,7 +31,7 @@ const hasToC = toc.length > 1;
             image={entry.data.image}
             entry={entry} >
   <main
-    class="relative z-40 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900 snap-y"
+    class="relative z-40 max-w-4xl pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-gray-950 snap-y"
   >
     <div
       class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
@@ -55,7 +55,7 @@ const hasToC = toc.length > 1;
       class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert text-justify"
     >
       <h4 class="mt-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
-        Written by <a href="/about" class="font-semibold">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
+        Written by <a href="/about" class="font-semibold text-slate-900 dark:text-slate-100">{`${entry.data.author}`}</a> on 📅 {<span class="underline decoration-dashed">{formatDate(entry.data.pubDate
           )}</span>}
       </h4>
       <h4 class="my-2.5 text-xs font-medium text-neutral-800 dark:text-neutral-300 text-center">
@@ -66,7 +66,7 @@ const hasToC = toc.length > 1;
       </div>
       {
       entry.data.image? (
-      <img src={entry.data.image} alt={`image of Post - ${entry.data.title}`}>
+      <img src={entry.data.image} alt={`Image of Post - ${entry.data.title}`}>
       ) : ""
       }
       {
@@ -74,13 +74,15 @@ const hasToC = toc.length > 1;
       <div class="flex place-content-center mb-5">
         <a href= {entry.data.imageSrc}
           target="_blank"
-          class="text-center no-underline hover:text-fuchsia-800 hover:scale-105"
+          class="text-center text-slate-900 dark:text-slate-100 no-underline hover:text-fuchsia-800 dark:hover:text-fuchsia-800 hover:scale-105"
         >[image source]</a>
       </div>
       ) : ""
       }
       {hasToC? <TableOfContents headings={headings} />: ''}
-      <Content />
+      <div class=" text-gray-950 dark:text-neutral-100">
+        <Content />
+      </div>
     </article>
 
     <!-- comments -->
