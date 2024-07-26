@@ -18,7 +18,7 @@ const {
 <!doctype html>
 <html lang="en">
   <MainHead {title} {description} {image} {entry} {robots} />
-  <body class="antialiased bg-white dark:bg-neutral-950 w-full">
+  <body class="antialiased bg-white dark:bg-neutral-950">
     <Fragment>
       <SquareLines />
       <Navbar />
@@ -39,5 +39,9 @@ const {
     min-width: 37rem;
     display: grid;
     grid-template-rows: auto 1fr;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
   }
 </style>

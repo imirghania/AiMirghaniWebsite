@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import { remarkReadingTime } from "./remark-reading-time.mjs";
+// import { remarkReadingTime } from "./remark-reading-time.mjs";
 import vue from "@astrojs/vue";
 import mdx from "@astrojs/mdx";
 import rehypeSlug from "rehype-slug";
@@ -42,8 +42,10 @@ export default defineConfig({
     extendDefaultPlugins: true,
     syntaxHighlight: false,
     // remarkPlugins: [remarkReadingTime],
+    remarkPlugins: [remarkMath],
     rehypePlugins: [
       rehypeSlug,
+      rehypeKatex,
       [rehypeAutolinkHeadings, rehypeAutolinkHeadingsOptions],
       [rehypePrettyCode, rehypePrettyCodeOptions],
     ],

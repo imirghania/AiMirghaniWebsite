@@ -33,7 +33,7 @@ const hasToC = toc.length > 1;
             entry={entry} 
             >
   <main
-    class="relative z-40 max-w-4xl pt-4 pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-gray-950 snap-y"
+    class="relative z-40 max-w-4xl pt-4 pb-1 mx-auto bg-white dark:bg-neutral-950 md:rounded-t-md text-gray-950 snap-y w-full"
   >
     <div
       class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
@@ -87,14 +87,7 @@ const hasToC = toc.length > 1;
       </div>
     </article>
 
-    <!-- comments -->
     <Separator text="Comments" />
     <GiscusComments />
   </main>
 </MainLayout>
-
-<style>
-  h1, h2, h3, h4, h5, h6 {
-    color: black;
-  }
-</style>
