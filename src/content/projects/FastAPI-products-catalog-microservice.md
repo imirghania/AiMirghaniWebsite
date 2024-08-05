@@ -5,6 +5,7 @@ image: /assets/images/projects/product_catalog_api_service.png
 pubDate: 2023-07-07
 tags: ["web-dev", "FastAPI", "e-commerce"]
 url: https://github.com/imirghania/FastAPI_e-commerce_product_catalog_service
+isPublished: true
 slug: products-catalog-microservice
 ---
 
