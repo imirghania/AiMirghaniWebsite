@@ -21,7 +21,7 @@ if(entry == undefined) {
     return Astro.redirect('/404')
 }
 
-const { Content, remarkPluginFrontmatter, headings } = await entry.render()
+const { Content, headings } = await entry.render()
 
 const toc: TocItem[] = buildToc(headings ?? []);
 const hasToC = toc.length > 1;
