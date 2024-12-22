@@ -1,7 +1,7 @@
 ---
 title: Texas Holdem End to End project
 description: A products-catalog microservice for an e-commerce system.
-image: /assets/images/projects/poker_project.png
+image: /assets/images/projects/poker_project.jpg
 pubDate: 2024-12-18
 tags: ["data-science", "LightGBM", "Pandas"]
 url: https://github.com/imirghania/PokerProject
