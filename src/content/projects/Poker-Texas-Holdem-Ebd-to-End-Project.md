@@ -1,5 +1,5 @@
 ---
-title: Texas Holdem End to End project
+title: Texas Holdem Poker Game Analysis End to End project
 description: A products-catalog microservice for an e-commerce system.
 image: /assets/images/projects/poker_project.jpg
 pubDate: 2024-12-18
