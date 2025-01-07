@@ -1,6 +1,6 @@
 ---
 title: Texas Holdem Poker Game Analysis End to End project
-description: A products-catalog microservice for an e-commerce system.
+description: An End-to-End Poker game analysis project starts from EDA and ends with Folding classifier.
 image: /assets/images/projects/poker_project.jpg
 pubDate: 2024-12-18
 tags: ["data-science", "LightGBM", "Pandas"]
