@@ -6,6 +6,20 @@
 
 .prose img {
   border-radius: 30px;
+  max-width: 100%;
+  height: auto;
+  display: block; /* Optional: if centering or block behavior is desired */
+  margin-left: auto; /* Optional: for centering if display: block */
+  margin-right: auto; /* Optional: for centering if display: block */
+}
+
+.responsive-main-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px; /* For visual consistency */
 }
 
 #sun {
