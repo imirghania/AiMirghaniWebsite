@@ -1,20 +1,32 @@
 [
   {
-    "name": "FastAPI product catalog service",
-    "description": "A microservice for e-commerce product catalog.",
-    "image": "/assets/images/projects/email.ml.png",
-    "url": "https://github.com/imirghania/FastAPI_e-commerce_product_catalog_service"
-  },
-  {
     "name": "Credit-score classification",
     "description": "An end-to-end ML project, from data cleaning to experimentations and models building.",
     "image": "/assets/images/projects/dns.surf.png",
     "url": "https://github.com/imirghania/Credit_Classification_project"
   },
   {
+    "name": "Poker Game Analysis",
+    "description": "An end-to-end ML project, on IRC dataset, from EDA to experimentations and models building.",
+    "image": "/assets/images/projects/poker_project.png",
+    "url": "https://github.com/imirghania/PokerProject"
+  },
+  {
+    "name": "Analog time reader",
+    "description": "A computer vision system to automatically detect and interpret time from analog clock images.",
+    "image": "/assets/images/projects/time_reader.png",
+    "url": "https://github.com/imirghania/analog-time-reader"
+  },
+  {
     "name": "Object detector for drone captured images",
     "description": "Web Toolbox.",
-    "image": "/assets/images/projects/html.zone.png",
-    "url": "https://html.zone"
+    "image": "/assets/images/projects/visdrone-detector-flask-app.png",
+    "url": "https://github.com/imirghania/VisDrone_Detector_Flask_APP"
+  },
+  {
+    "name": "FastAPI product catalog service",
+    "description": "A microservice for e-commerce product catalog.",
+    "image": "/assets/images/projects/email.ml.png",
+    "url": "https://github.com/imirghania/FastAPI_e-commerce_product_catalog_service"
   }
 ]
