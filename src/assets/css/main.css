@@ -28,6 +28,10 @@ html.dark #darkToggle:hover .horizon {
   border-color: #718096 !important;
 }
 
+html.dark .join a.btn {
+  color: white;
+}
+
 .horizon .setting {
   animation: 1s ease 0s 1 setting;
 }
