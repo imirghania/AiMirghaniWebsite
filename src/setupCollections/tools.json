@@ -70,6 +70,26 @@
     ]
   },
   {
+    "skillName": "Generative AI",
+    "skillTools": [
+      {
+        "logo": "genai/huggingface",
+        "url": "https://huggingface.co/",
+        "tooltip": "HuggingFace"
+      },
+      {
+        "logo": "genai/langchain",
+        "url": "https://www.langchain.com/",
+        "tooltip": "LangChain"
+      },
+      {
+        "logo": "genai/langgraph",
+        "url": "https://www.langchain.com/langgraph",
+        "tooltip": "LangGraph"
+      }
+    ]
+  },
+  {
     "skillName": "Computer Vision",
     "skillTools": [
       {

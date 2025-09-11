@@ -163,6 +163,8 @@
   font: normal 1.21em KaTeX_Main, Times New Roman, serif;
   line-height: 1.2;
   text-indent: 0;
+  white-space: normal;
+  overflow-x: auto;
 }
 .katex * {
   -ms-high-contrast-adjust: none !important;
@@ -185,7 +187,6 @@
 }
 .katex .base {
   position: relative;
-  white-space: nowrap;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
