@@ -3,14 +3,14 @@ from dataclasses import ( dataclass,
                           field )
 
 @dataclass
-class Person:
+class AiEngineer:
     name: str = "Ahmed Mirghani"
     skills: list[str] = field(
         default_factory=(
             lambda: [
-            "Data Science",
-            "Web Development",
-            "Desktop Apps"
+            "Data Analysis",
+            "Computer Vision",
+            "Agentic workflows"
             ])
         )
 ```

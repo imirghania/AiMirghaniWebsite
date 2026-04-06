@@ -9,26 +9,26 @@
   },
   {
     "discription": "⭐Data Analysis dashboards",
-    "tools": "🚀Streamlit & Dash"
+    "tools": "🚀Streamlit & PowerBI"
   },
   {
     "discription": "⭐Computer vision",
-    "tools": "🚀OpenCV, PIL & TorchVision"
-  },
-  {
-    "discription": "⭐Time series Analysis",
-    "tools": "🚀Prophet & statsmodels"
+    "tools": "🚀Ultralytics & Roboflow"
   },
   {
     "discription": "⭐Web developing",
     "tools": "🚀FastAPI & Flask"
   },
   {
-    "discription": "⭐GUI applications",
-    "tools": "🚀Tkinter & PySide6"
+    "discription": "⭐GenAI",
+    "tools": "🚀Transformers, LangChain"
+  },
+  {
+    "discription": "⭐Agentic AI",
+    "tools": "🚀LangGraph, CrewAi"
   },
   {
     "discription": "⭐A litle bit of frontend",
-    "tools": "🚀Vue3.js, Nuxt & Astro"
+    "tools": "🚀Vue3.js, React & Astro"
   }
 ]

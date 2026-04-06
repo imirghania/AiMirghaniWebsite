@@ -128,25 +128,29 @@ $$
 
 In other form, the overall $\sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^{2} \rightarrow 0$
 
-Since $\hat{y} = X\hat{B}$, we can express $\sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^{2}$ &emsp; as ↴
+Since $\hat{y} = X\hat{B}$,
+
+we can express $\sum_{i=1}^{n} (y_{i} - \hat{y_{i}})^{2}$ &emsp; as ↴
 
 $$(y_{i} - \hat{y_{i}})^2\ =\ (y - \hat{y})^T(y - \hat{y})$$
 
 $$(y - \hat{y} )^T(y - \hat{y} ) =\ (y - X\hat{B} )^T(y - X\hat{B} )$$
 
-$$ =\ (y^{T} - (X\hat{B})^{T})(y - X\hat{B}) =\ (y^{T} - \hat{B}^{T}X^{T})(y - X\hat{B})$$
+$$ =\ (y^{T} - (X\hat{B})^{T})(y - X\hat{B})$$
+
+$$ =\ (y^{T} - \hat{B}^{T}X^{T})(y - X\hat{B})$$
 
 $$ = y^{T}y - y^{T}X\hat{B} - \hat{B}^{T}X^{T}y + \hat{B}^{T}X^{T}X\hat{B}$$
 
-$$\large \frac{\partial\ ({(y - X\hat{B})^T(y - X\hat{B})}) }{\partial \hat{B}} = 0$$
+$$\frac{\partial\ ({(y - X\hat{B})^T(y - X\hat{B})}) }{\partial \hat{B}} = 0$$
 
-$$\large \Rightarrow \quad \frac {\partial\ (y^{T}y\ -\ y^{T}X\hat{B}\ -\ \hat{B}^{T}X^{T}y\ +\ \hat{B}^{T}X^{T}X\hat{B})}{\partial \hat{B}} = 0$$
+$$\Rightarrow \quad \frac {\partial\ (y^{T}y\ -\ y^{T}X\hat{B}\ -\ \hat{B}^{T}X^{T}y\ +\ \hat{B}^{T}X^{T}X\hat{B})}{\partial \hat{B}} = 0$$
 
-$$\large \Rightarrow \frac{\partial y^{T}y}{\partial \hat{B}} - \frac{\partial  y^{T}X\hat{B}}{\partial \hat{B}} - \frac{\partial \hat{B}^{T}X^{T}y}{\partial \hat{B}} + \frac{\partial \hat{B}^{T}X^{T}X\hat{B}}{\partial \hat{B}} = 0$$
+$$\Rightarrow \frac{\partial y^{T}y}{\partial \hat{B}} - \frac{\partial  y^{T}X\hat{B}}{\partial \hat{B}} - \frac{\partial \hat{B}^{T}X^{T}y}{\partial \hat{B}} + \frac{\partial \hat{B}^{T}X^{T}X\hat{B}}{\partial \hat{B}} = 0$$
 
 if we have a matrix $A_{m \times m}$ and a vector $x_{m \times 1}$, then:
 
-$$\large \frac{\partial Ax}{\partial x} = A, \qquad \frac{\partial x^{T}A}{\partial x} = A^{T}, \qquad \frac{\partial x^{T}Ax}{\partial x} = 2A^{T}x$$
+$$\large \frac{\partial Ax}{\partial x} = A, \ \frac{\partial x^{T}A}{\partial x} = A^{T}, \ \frac{\partial x^{T}Ax}{\partial x} = 2A^{T}x$$
 
 $$\large \Rightarrow \qquad \frac{\partial  y^{T}X\hat{B}}{\partial \hat{B}} = y^{T}X$$
 
@@ -156,7 +160,7 @@ $$\large \qquad \quad \frac{\partial \hat{B}^{T}X^{T}X\hat{B}}{\partial \hat{B}}
 
 $$\large \qquad \quad \frac{\partial y^{T}y}{\partial \hat{B}} = 0$$
 
-$$\therefore \large \quad -y^{T}X - y^{T}X + 2X^{T}X\hat{B} \quad = \quad 0$$
+$$\therefore \quad -y^{T}X - y^{T}X + 2X^{T}X\hat{B} \quad = \quad 0$$
 
 $$\large \Rightarrow \quad 2X^{T}X\hat{B} \quad = \quad 2y^{T}X$$
 

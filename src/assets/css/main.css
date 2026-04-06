@@ -4,6 +4,26 @@
 
 /* Add Your Custom CSS Here */
 
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.katex-display::-webkit-scrollbar {
+  height: 6px;
+}
+
+.katex-display::-webkit-scrollbar-thumb {
+  background: #a0a0a0;
+  border-radius: 3px;
+}
+
+html.dark .katex-display::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
 .prose img {
   border-radius: 30px;
   max-width: 100%;
