@@ -8,6 +8,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
+  padding-bottom: 8px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -22,6 +23,12 @@
 
 html.dark .katex-display::-webkit-scrollbar-thumb {
   background: #555;
+}
+
+@media (max-width: 767px) {
+  .prose {
+    max-width: 100vw;
+  }
 }
 
 .prose img {
