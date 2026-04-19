@@ -27,7 +27,7 @@ html.dark .katex-display::-webkit-scrollbar-thumb {
 
 @media (max-width: 767px) {
   .prose {
-    max-width: 100vw;
+    max-width: 100vw !important;
   }
 }
 
