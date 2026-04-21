@@ -1,8 +1,13 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, label } = Astro.props;
 ---
 
 <div class="relative z-20 w-full mx-auto lg:mx-0">
+  {label && (
+    <p class="font-mono text-xs text-violet-500 dark:text-fuchsia-400 uppercase tracking-widest mb-3">
+      {label}
+    </p>
+  )}
   <h2
     class="text-2xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-3xl lg:text-4xl"
   >

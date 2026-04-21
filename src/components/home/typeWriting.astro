@@ -1,10 +1,20 @@
-<div
-class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white"
->
-    <span class="text-slate-100 dark:text-neutral-900 text-xs md:text-base">(venv) &#8921 </span>
-    <span id="typing" class="text-fuchsia-400 dark:text-fuchsia-800 text-xs md:text-base"></span>
-</div>
+<div class="rounded-lg overflow-hidden border border-neutral-700/60 shadow-xl shadow-black/30 font-mono text-xs md:text-sm w-full">
 
+  <!-- Title bar -->
+  <div class="flex items-center gap-1.5 px-3 py-2 bg-[#1c2128] border-b border-neutral-700/50">
+    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+    <span class="ml-2 text-neutral-500 text-xs tracking-wide">ahmed@ai — ~/skills</span>
+  </div>
+
+  <!-- Terminal body -->
+  <div class="bg-[#0d1117] px-4 py-3 leading-relaxed" style="min-height: 4.5rem;">
+    <span class="text-green-400">(venv) ahmed@ai:~$&nbsp;</span>
+    <span id="typing" class="text-fuchsia-400"></span>
+  </div>
+
+</div>
 
 <script>
     // @ts-ignore
@@ -14,33 +24,31 @@ class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white
 
     let container = document.querySelector("#typing")
 
-
     let typewriter = new Typewriter(container, {
-    loop: true,
-    delay: 75,
+        loop: true,
+        delay: 75,
     });
 
-    function printSkill(typewriter:TypeWrtr, 
-                        str:string,
-                        deletionSpeed:number=20,
-                        afterTyingPause:number=1000,
-                        afterDeletePause:number=500): TypeWrtr{
-
+    function printSkill(typewriter: TypeWrtr,
+                        str: string,
+                        deletionSpeed: number = 20,
+                        afterTypingPause: number = 1000,
+                        afterDeletePause: number = 500): TypeWrtr {
         return typewriter.typeString(str)
-                        .pauseFor(afterTyingPause)
-                        .deleteAll(deletionSpeed)
-                        .pauseFor(afterDeletePause)
-                        }
+                         .pauseFor(afterTypingPause)
+                         .deleteAll(deletionSpeed)
+                         .pauseFor(afterDeletePause);
+    }
 
     typewriter = typewriter.pauseFor(4500)
-                        .typeString("import skills from knowledge_base")
-                        .pauseFor(1500)
-                        .deleteAll(5)
-                        .pauseFor(800)
-                        .typeString('<span style="color: #27ae60;">... Loading .....</span>')
-                        .pauseFor(2000)
-                        .deleteAll(5)
-                        .pauseFor(3000)
+                           .typeString("import skills from knowledge_base")
+                           .pauseFor(1500)
+                           .deleteAll(5)
+                           .pauseFor(800)
+                           .typeString('<span style="color: #4ade80;">... Loading .....</span>')
+                           .pauseFor(2000)
+                           .deleteAll(5)
+                           .pauseFor(3000)
 
     skills.forEach((skill) => {
         typewriter = printSkill(typewriter, skill.discription)
@@ -48,5 +56,4 @@ class="bg-neutral-800 sm:px-2 p-3 rounded overflow-x-auto max-h-12 dark:bg-white
     })
 
     typewriter.pauseFor(10000).start();
-
 </script>

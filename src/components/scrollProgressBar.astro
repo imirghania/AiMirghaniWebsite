@@ -28,10 +28,11 @@ document.addEventListener('scroll', updateProgressBar)
 <style lang="css" scoped>
 #progress-bar {
   --progress: 0;
-  height: 6px;
+  height: 3px;
   width: var(--progress);
-  position: sticky;
-  top: 3.5rem;
+  position: fixed;
+  top: 5rem;
+  left: 0;
   z-index: 100;
 }
 </style>

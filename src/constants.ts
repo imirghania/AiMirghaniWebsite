@@ -9,5 +9,5 @@ export const BACK_TO_TOP_OFFSET = 700;
 export const EMAIL = "imirghania@gmail.com";
 export const GITHUB_URL = "https://github.com/imirghania";
 export const TELEGRAM_URL = "https://t.me/AhmdIdris";
-export const INSTAGRAM_URL = "https://instagram.com/ahmedidris89";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/aimirghani/";
 export const RSS_URL = "https://feed.miantiao.me/";

@@ -6,6 +6,9 @@ const feed = "https://ahmed.imirghani.com/feed";
 ---
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
+  <p class="font-mono text-xs text-violet-500 dark:text-fuchsia-400 uppercase tracking-widest mb-3">
+    $ cat articles
+  </p>
   <h2
     class="text-2xl font-bold leading-10 tracking-tight text-neutral-900 dark:text-neutral-100"
   >
@@ -30,7 +33,7 @@ const feed = "https://ahmed.imirghani.com/feed";
         <form
           method="get"
           action={feed}
-          class="p-6 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600"
+          class="p-6 border rounded-xl border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
         >
           <div class="relative flex items-center space-x-2">
             <svg
@@ -70,7 +73,7 @@ const feed = "https://ahmed.imirghani.com/feed";
               aria-label="Email address"
               required=""
               value={feed}
-              class="w-full h-10 px-3 text-sm border border-dashed rounded-md focus:ring-0 focus:outline-black border-neutral-400 dark:border-neutral-600 dark:bg-neutral-800 dark:placeholder-neutral-400 dark:text-white"
+              class="w-full h-10 px-3 text-sm border rounded-md focus:ring-0 focus:outline-black border-neutral-200 dark:border-neutral-700 dark:bg-neutral-800 dark:placeholder-neutral-400 dark:text-white"
             />
             <button
               type="submit"

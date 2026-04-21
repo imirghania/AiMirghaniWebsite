@@ -1,7 +1,7 @@
 ---
 import Logo from "@components/logo.astro";
 import { Icon } from 'astro-icon/components'
-import { EMAIL, GITHUB_URL, TELEGRAM_URL, INSTAGRAM_URL } from "@root/constants"
+import { EMAIL, GITHUB_URL, TELEGRAM_URL, LINKEDIN_URL } from "@root/constants"
 ---
 
 <section
@@ -21,7 +21,7 @@ import { EMAIL, GITHUB_URL, TELEGRAM_URL, INSTAGRAM_URL } from "@root/constants"
     >
 
       <a
-        href={EMAIL}
+        href={`mailto:${EMAIL}`}
         target="_blank"
         class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
       >
@@ -30,12 +30,12 @@ import { EMAIL, GITHUB_URL, TELEGRAM_URL, INSTAGRAM_URL } from "@root/constants"
       </a>
 
       <a
-        href={INSTAGRAM_URL}
+        href={LINKEDIN_URL}
         target="_blank"
         class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white"
       >
-        <span class="sr-only">Instagram</span>
-            <Icon name="contacts/instagram" class="w-6 h-6" />
+        <span class="sr-only">LinkedIn</span>
+            <Icon name="contacts/linkedin" class="w-6 h-6" />
       </a>
           
       <a
