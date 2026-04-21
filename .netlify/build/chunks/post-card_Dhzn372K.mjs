@@ -1,6 +1,6 @@
 import { b as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, d as addAttribute, a as renderComponent, F as Fragment } from './astro/server_DA_5307C.mjs';
-import { $ as $$Tags } from './Tags_BDex4D24.mjs';
-import { f as formatDate } from './main_CS8CpU1k.mjs';
+import { $ as $$Tags } from './Tags_CdUWXO8L.mjs';
+import { f as formatDate } from './main_VerNqDWG.mjs';
 
 const $$Astro = createAstro("https://ahmed.imirghani.com/");
 const $$PostCard = createComponent(($$result, $$props, $$slots) => {

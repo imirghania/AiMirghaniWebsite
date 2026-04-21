@@ -1,8 +1,8 @@
 /* empty css                                 */
 import { b as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, d as addAttribute, a as renderComponent, F as Fragment } from '../chunks/astro/server_DA_5307C.mjs';
-import { a as $$Icon, G as GITHUB_URL, E as EMAIL, T as TELEGRAM_URL, L as LINKEDIN_URL, $ as $$Main } from '../chunks/main_CS8CpU1k.mjs';
+import { a as $$Icon, G as GITHUB_URL, E as EMAIL, T as TELEGRAM_URL, L as LINKEDIN_URL, $ as $$Main } from '../chunks/main_VerNqDWG.mjs';
 import { $ as $$Separator } from '../chunks/separator_CZzneCoQ.mjs';
-import { C as Content } from '../chunks/aboutMe_B0-HIbzC.mjs';
+import { C as Content } from '../chunks/aboutMe_NqNQry3V.mjs';
 export { renderers } from '../renderers.mjs';
 
 const tools = [
@@ -125,19 +125,9 @@ const tools = [
 				tooltip: "Flask"
 			},
 			{
-				logo: "webDev/jinja2",
-				url: "https://jinja.palletsprojects.com/",
-				tooltip: "Jinja2 Templating Engine"
-			},
-			{
 				logo: "webDev/htmx",
 				url: "https://htmx.org/",
 				tooltip: "HTMX"
-			},
-			{
-				logo: "webDev/rabbitmq",
-				url: "https://www.rabbitmq.com/",
-				tooltip: "RabbitMQ"
 			},
 			{
 				logo: "webDev/vue",
@@ -228,6 +218,11 @@ const tools = [
 				logo: "devTools/airflow",
 				url: "https://airflow.apache.org/",
 				tooltip: "Apache Airflow"
+			},
+			{
+				logo: "webDev/rabbitmq",
+				url: "https://www.rabbitmq.com/",
+				tooltip: "RabbitMQ"
 			}
 		]
 	}

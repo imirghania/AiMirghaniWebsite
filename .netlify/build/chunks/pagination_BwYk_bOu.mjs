@@ -7,13 +7,13 @@ const $$Pagination = createComponent(($$result, $$props, $$slots) => {
   const { currentPage, totalPages, pageType, disablePrevious, disableNext } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<div class="join grid grid-cols-3"> <a${addAttribute("/" + pageType + "?page=" + (currentPage - 1), "href")}${addAttribute(
     [
-      "join-item btn border-dashed border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-white dark:hover:bg-black hover:text-neutral-900 dark:hover:text-white hover:border-neutral-700 dark:hover:border-neutral-300 transition-colors duration-300",
+      "join-item btn border-dashed border border-neutral-900 dark:border-neutral-600 bg-neutral-900 dark:bg-neutral-900 text-white dark:text-neutral-100 hover:bg-white hover:text-neutral-900 hover:border-neutral-700 dark:hover:bg-white dark:hover:!text-neutral-900 dark:hover:border-neutral-300 transition-colors duration-300",
       { "pointer-events-none opacity-40": disablePrevious }
     ],
     "class:list"
   )}>«</a> <a class="join-item btn border-dashed border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 pointer-events-none">Page ${currentPage}</a> <a${addAttribute("/" + pageType + "?page=" + (currentPage + 1), "href")}${addAttribute(
     [
-      "join-item btn border-dashed border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-white dark:hover:bg-black hover:text-neutral-900 dark:hover:text-white hover:border-neutral-700 dark:hover:border-neutral-300 transition-colors duration-300",
+      "join-item btn border-dashed border border-neutral-900 dark:border-neutral-600 bg-neutral-900 dark:bg-neutral-900 text-white dark:text-neutral-100 hover:bg-white hover:text-neutral-900 hover:border-neutral-700 dark:hover:bg-white dark:hover:!text-neutral-900 dark:hover:border-neutral-300 transition-colors duration-300",
       { "pointer-events-none opacity-40": disableNext }
     ],
     "class:list"
