@@ -1,5 +1,11 @@
 [
   {
+    "name": "Agentic Documentation Generator",
+    "description": "An AI-powered system that generates high-quality, progressive documentation for any code library or framework",
+    "image": "/assets/images/projects/agentic_docs.png",
+    "url": "https://github.com/imirghania/AgenticDocs"
+  },
+  {
     "name": "Credit-score classification",
     "description": "An end-to-end ML project, from data cleaning to experimentations and models building.",
     "image": "/assets/images/projects/dns.surf.png",
@@ -16,12 +22,6 @@
     "description": "A computer vision system to automatically detect and interpret time from analog clock images.",
     "image": "/assets/images/projects/time_reader.png",
     "url": "https://github.com/imirghania/analog-time-reader"
-  },
-  {
-    "name": "Object detector for drone captured images",
-    "description": "Web Toolbox.",
-    "image": "/assets/images/projects/visdrone-detector-flask-app.png",
-    "url": "https://github.com/imirghania/VisDrone_Detector_Flask_APP"
   },
   {
     "name": "FastAPI product catalog service",

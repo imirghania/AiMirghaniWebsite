@@ -87,7 +87,7 @@ import { EMAIL, GITHUB_URL, TELEGRAM_URL, LINKEDIN_URL } from '@root/constants';
           return (
             <>
               {!isLast ? (
-                <div class="pb-10 border-l border-gray-200 dark:border-neutral-700">
+                <div class="pb-10 gradient-timeline-line">
                   <AboutExperience
                     dates={study.dates}
                     role={study.degree}
@@ -182,3 +182,21 @@ import { EMAIL, GITHUB_URL, TELEGRAM_URL, LINKEDIN_URL } from '@root/constants';
 
   </section>
 </Layout>
+
+<style>
+  .gradient-timeline-line {
+    position: relative;
+  }
+  .gradient-timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, #a78bfa, #e879f9);
+  }
+  :global(.dark) .gradient-timeline-line::before {
+    background: linear-gradient(to bottom, #8b5cf6, #d946ef);
+  }
+</style>
