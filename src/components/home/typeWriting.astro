@@ -35,20 +35,20 @@
                         afterTypingPause: number = 1000,
                         afterDeletePause: number = 500): TypeWrtr {
         return typewriter.typeString(str)
-                         .pauseFor(afterTypingPause)
-                         .deleteAll(deletionSpeed)
-                         .pauseFor(afterDeletePause);
+                        .pauseFor(afterTypingPause)
+                        .deleteAll(deletionSpeed)
+                        .pauseFor(afterDeletePause);
     }
 
     typewriter = typewriter.pauseFor(4500)
-                           .typeString("import skills from knowledge_base")
-                           .pauseFor(1500)
-                           .deleteAll(5)
-                           .pauseFor(800)
-                           .typeString('<span style="color: #4ade80;">... Loading .....</span>')
-                           .pauseFor(2000)
-                           .deleteAll(5)
-                           .pauseFor(3000)
+                          .typeString("import skills from knowledge_base")
+                          .pauseFor(1500)
+                          .deleteAll(5)
+                          .pauseFor(800)
+                          .typeString('<span style="color: #4ade80;">Loading ...</span>')
+                          .pauseFor(2000)
+                          .deleteAll(5)
+                          .pauseFor(3000)
 
     skills.forEach((skill) => {
         typewriter = printSkill(typewriter, skill.discription)

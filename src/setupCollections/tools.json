@@ -118,19 +118,9 @@
         "tooltip": "Flask"
       },
       {
-        "logo": "webDev/jinja2",
-        "url": "https://jinja.palletsprojects.com/",
-        "tooltip": "Jinja2 Templating Engine"
-      },
-      {
         "logo": "webDev/htmx",
         "url": "https://htmx.org/",
         "tooltip": "HTMX"
-      },
-      {
-        "logo": "webDev/rabbitmq",
-        "url": "https://www.rabbitmq.com/",
-        "tooltip": "RabbitMQ"
       },
       {
         "logo": "webDev/vue",
@@ -221,6 +211,11 @@
         "logo": "devTools/airflow",
         "url": "https://airflow.apache.org/",
         "tooltip": "Apache Airflow"
+      },
+      {
+        "logo": "webDev/rabbitmq",
+        "url": "https://www.rabbitmq.com/",
+        "tooltip": "RabbitMQ"
       }
     ]
   }

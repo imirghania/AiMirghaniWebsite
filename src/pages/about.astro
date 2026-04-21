@@ -45,30 +45,35 @@ import { EMAIL, GITHUB_URL, TELEGRAM_URL, LINKEDIN_URL } from '@root/constants';
 
     <Separator text="Technical Skills" />
 
-    <div class="space-y-8 mb-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
       {tools.map((skill) => (
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-fuchsia-400 whitespace-nowrap">
+        <div class="group rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm dark:shadow-none p-5 hover:border-violet-300 dark:hover:border-fuchsia-800/60 hover:shadow-md hover:shadow-violet-500/10 transition-all duration-300">
+
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-mono text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-fuchsia-400">
               {skill.skillName}
             </span>
-            <div class="flex-1 h-px bg-neutral-100 dark:bg-neutral-800"></div>
+            <span class="font-mono text-[10px] text-neutral-300 dark:text-neutral-600 tabular-nums">
+              {skill.skillTools.length.toString().padStart(2, '0')}
+            </span>
           </div>
-          <div class="flex flex-wrap gap-3">
+
+          <div class="flex flex-wrap gap-2">
             {skill.skillTools.map((tool) => (
               <a
                 href={tool.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group flex flex-col items-center gap-2 p-3 w-[72px] rounded-xl border border-neutral-100 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-violet-300 dark:hover:border-fuchsia-700/60 hover:bg-violet-50 dark:hover:bg-fuchsia-900/10 hover:shadow-sm transition-all duration-200"
+                class="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 hover:border-violet-300 dark:hover:border-fuchsia-700/50 hover:bg-violet-50 dark:hover:bg-fuchsia-900/10 transition-all duration-150"
               >
-                <Icon name={tool.logo} size={28} class="transition-transform duration-200 group-hover:scale-110" />
-                <span class="text-[10px] font-mono text-neutral-400 dark:text-neutral-500 group-hover:text-violet-600 dark:group-hover:text-fuchsia-400 transition-colors duration-200 text-center leading-tight w-full truncate">
+                <Icon name={tool.logo} size={16} />
+                <span class="text-[11px] font-medium text-neutral-600 dark:text-neutral-400">
                   {tool.tooltip}
                 </span>
               </a>
             ))}
           </div>
+
         </div>
       ))}
     </div>

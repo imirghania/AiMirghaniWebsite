@@ -1,6 +1,6 @@
 [
   {
-    "discription": "⭐Standard Data Science eco-system",
+    "discription": "⭐Standard Data Science packages",
     "tools": "🚀Numpy, Pandas, Scipy & sklearn"
   },
   {
@@ -9,26 +9,30 @@
   },
   {
     "discription": "⭐Data Analysis dashboards",
-    "tools": "🚀Streamlit & PowerBI"
+    "tools": "🚀Streamlit, MetaBase & PowerBI"
   },
   {
     "discription": "⭐Computer vision",
-    "tools": "🚀Ultralytics & Roboflow"
+    "tools": "🚀OpenCV, Ultralytics & Roboflow"
   },
   {
     "discription": "⭐Web developing",
-    "tools": "🚀FastAPI & Flask"
+    "tools": "🚀FastAPI, LiteStar & Flask"
   },
   {
     "discription": "⭐GenAI",
-    "tools": "🚀Transformers, LangChain"
+    "tools": "🚀Transformers, AWS Bedrock"
   },
   {
     "discription": "⭐Agentic AI",
-    "tools": "🚀LangGraph, CrewAi"
+    "tools": "🚀LangChain eco-system, CrewAi"
   },
   {
     "discription": "⭐A litle bit of frontend",
     "tools": "🚀Vue3.js, React & Astro"
+  },
+  {
+    "discription": "⭐Cloud Solutions",
+    "tools": "🚀AWS"
   }
 ]

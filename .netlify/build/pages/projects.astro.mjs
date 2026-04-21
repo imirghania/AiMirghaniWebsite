@@ -2,9 +2,9 @@
 import { b as createAstro, c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_DA_5307C.mjs';
 import { $ as $$PageHeading } from '../chunks/page-heading_DNaoVok4.mjs';
 import { $ as $$Project } from '../chunks/project_CX4Q3ygk.mjs';
-import { P as PROJECTS_PER_PAGE, $ as $$Main } from '../chunks/main_CDnNHdgm.mjs';
-import { a as getCollection } from '../chunks/_astro_content_DDJfDPyh.mjs';
-import { $ as $$Pagination } from '../chunks/pagination_X7HoJITW.mjs';
+import { P as PROJECTS_PER_PAGE, $ as $$Main } from '../chunks/main_CS8CpU1k.mjs';
+import { a as getCollection } from '../chunks/_astro_content_kHAT7z-Z.mjs';
+import { $ as $$Pagination } from '../chunks/pagination_4hrmCsQL.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Astro = createAstro("https://ahmed.imirghani.com/");

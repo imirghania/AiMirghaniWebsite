@@ -7,13 +7,13 @@ const $$Pagination = createComponent(($$result, $$props, $$slots) => {
   const { currentPage, totalPages, pageType, disablePrevious, disableNext } = Astro2.props;
   return renderTemplate`${maybeRenderHead()}<div class="join grid grid-cols-3"> <a${addAttribute("/" + pageType + "?page=" + (currentPage - 1), "href")}${addAttribute(
     [
-      "join-item btn border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-300 hover:bg-violet-500 hover:border-violet-500 hover:text-white dark:hover:bg-violet-600 dark:hover:border-violet-600 dark:hover:text-white transition-colors duration-200",
+      "join-item btn border-dashed border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-white dark:hover:bg-black hover:text-neutral-900 dark:hover:text-white hover:border-neutral-700 dark:hover:border-neutral-300 transition-colors duration-300",
       { "pointer-events-none opacity-40": disablePrevious }
     ],
     "class:list"
-  )}>«</a> <a class="join-item btn border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 pointer-events-none">Page ${currentPage}</a> <a${addAttribute("/" + pageType + "?page=" + (currentPage + 1), "href")}${addAttribute(
+  )}>«</a> <a class="join-item btn border-dashed border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 pointer-events-none">Page ${currentPage}</a> <a${addAttribute("/" + pageType + "?page=" + (currentPage + 1), "href")}${addAttribute(
     [
-      "join-item btn border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-600 dark:text-neutral-300 hover:bg-fuchsia-500 hover:border-fuchsia-500 hover:text-white dark:hover:bg-fuchsia-600 dark:hover:border-fuchsia-600 dark:hover:text-white transition-colors duration-200",
+      "join-item btn border-dashed border border-neutral-900 dark:border-white bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-white dark:hover:bg-black hover:text-neutral-900 dark:hover:text-white hover:border-neutral-700 dark:hover:border-neutral-300 transition-colors duration-300",
       { "pointer-events-none opacity-40": disableNext }
     ],
     "class:list"

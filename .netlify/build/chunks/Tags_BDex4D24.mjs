@@ -1,5 +1,5 @@
 import { b as createAstro, c as createComponent, r as renderTemplate, m as maybeRenderHead, d as addAttribute } from './astro/server_DA_5307C.mjs';
-import { c as capitalize } from './main_CDnNHdgm.mjs';
+import { c as capitalize } from './main_CS8CpU1k.mjs';
 
 const $$Astro = createAstro("https://ahmed.imirghani.com/");
 const $$Tags = createComponent(($$result, $$props, $$slots) => {

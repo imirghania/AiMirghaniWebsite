@@ -1,6 +1,6 @@
 /* empty css                                 */
 import { c as createComponent, r as renderTemplate, a as renderComponent, m as maybeRenderHead } from '../chunks/astro/server_DA_5307C.mjs';
-import { $ as $$Main } from '../chunks/main_CDnNHdgm.mjs';
+import { $ as $$Main } from '../chunks/main_CS8CpU1k.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_BoIqDeNG.mjs';
 import { $ as $$Button } from '../chunks/button_CxsIsoUp.mjs';
 export { renderers } from '../renderers.mjs';
